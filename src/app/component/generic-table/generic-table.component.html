@@ -1,0 +1,50 @@
+<p-table
+  #dt
+  [value]="data"
+  [rows]="rows"
+  [paginator]="paginator"
+  [selectionMode]="selectionMode"
+  [(selection)]="selectedItem"
+  (onRowSelect)="onRowSelect($event)"
+  [dataKey]="dataKey"
+  [tableStyle]="{ 'min-width': '40rem' }"
+>
+  <!-- 🔍 Buscador -->
+  <ng-template pTemplate="caption">
+    <p-iconfield iconPosition="left">
+      <p-inputicon><i class="pi pi-search"></i></p-inputicon>
+      <input
+        pInputText
+        type="text"
+        (input)="onGlobalFilter($event)"
+        placeholder="Global Search"
+      />
+    </p-iconfield>
+  </ng-template>
+
+  <!-- 🧱 Encabezado -->
+  <ng-template pTemplate="header">
+    <tr>
+      <th *ngFor="let col of columns" pSortableColumn="{{ col.field }}">
+        {{ col.header }}
+        <p-sortIcon [field]="col.field" />
+      </th>
+    </tr>
+  </ng-template>
+
+  <!-- 📦 Cuerpo -->
+  <ng-template pTemplate="body" let-rowData>
+    <tr [pSelectableRow]="rowData">
+      <td *ngFor="let col of columns">
+        {{ getNestedValue(rowData, col.field) }}
+      </td>
+    </tr>
+  </ng-template>
+
+  <!-- 🚫 Vacío -->
+  <ng-template pTemplate="emptymessage">
+    <tr>
+      <td [attr.colspan]="columns.length">No records found.</td>
+    </tr>
+  </ng-template>
+</p-table>

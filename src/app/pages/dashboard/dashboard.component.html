@@ -1,58 +1,74 @@
- <div class="grid">
-        <!-- CARD 1 -->
-        <div class="col-12 md:col-6 lg:col-3">
-          <p-card>
-            <div class="card-header">
-              <span class="card-title">Orders</span>
-              <button pButton type="button" icon="pi pi-shopping-cart" title="order"
-                class="p-button-rounded p-button-text p-button-sm cart-btn"></button>
-            </div>
-            <div class="card-content">
-              <h2 class="card-number">152</h2>
-              <p class="card-subtext"><span class="new-count">24 new</span> since last visit</p>
-            </div>
-          </p-card>
+<div class="grid">
+  <!-- === CARDS === -->
+  <div class="col-12 md:col-6 lg:col-3" *ngFor="let card of cards">
+    <p-card>
+      <div class="card-header">
+        <span class="card-title">{{ card.title }}</span>
+        <button
+          pButton
+          type="button"
+          [icon]="card.icon"
+          [title]="card.title"
+          class="p-button-rounded p-button-text p-button-sm cart-btn"
+        ></button>
+      </div>
+      <div class="card-content">
+        <h2 class="card-number">{{ card.value }}</h2>
+        <p class="card-subtext" [innerHTML]="card.subtitle"></p>
+      </div>
+    </p-card>
+  </div>
+</div>
+<div class="grid">
+  <p-card header="Customer" class="col-12 md:col-6">
+    <app-generic-table
+      [data]="customers"
+      [columns]="columns"
+      [globalFilterFields]="filters"
+      (selectionChange)="selectedCustomer = $event"
+    ></app-generic-table>
+  </p-card>
+  <p-card header="Revenue Stream" class="col-12 md:col-6">
+    <p-chart type="bar" [data]="data" [options]="options" class="h-[30rem]" />
+  </p-card>
+</div>
+<div class="grid">
+  <p-card header="Best Selling Products" class="col-12 md:col-6">
+    <div class="flex justify-content-end mb-3">
+      <p-menu #menu [popup]="true" [model]="items"></p-menu>
+      <button
+        pButton
+        type="button"
+        icon="pi pi-ellipsis-v"
+        class="p-button-text"
+        (click)="menu.toggle($event)"
+      ></button>
+    </div>
+
+    <div *ngFor="let p of products" class="product-row">
+      <div class="flex justify-content-between align-items-center mb-3">
+        <div>
+          <div class="font-medium text-900">{{ p.name }}</div>
+          <div class="text-500 text-sm">{{ p.category }}</div>
         </div>
-        <!-- CARD 2 -->
-        <div class="col-12 md:col-6 lg:col-3">
-          <p-card>
-            <div class="card-header">
-              <span class="card-title">Revenue</span>
-              <button pButton type="button" icon="pi pi-dollar" title="revenue"
-                class="p-button-rounded p-button-text p-button-sm cart-btn"></button>
-            </div>
-            <div class="card-content">
-              <h2 class="card-number">$2,100</h2>
-              <p class="card-subtext"><span class="new-count">+52%</span> since last week</p>
-            </div>
-          </p-card>
-        </div>
-        <!-- CARD 3 -->
-        <div class="col-12 md:col-6 lg:col-3">
-          <p-card>
-            <div class="card-header">
-              <span class="card-title">Customers</span>
-              <button pButton type="button" icon="pi pi-users" title="customers"
-                class="p-button-rounded p-button-text p-button-sm cart-btn"></button>
-            </div>
-            <div class="card-content">
-              <h2 class="card-number">28,441</h2>
-              <p class="card-subtext"><span class="new-count">520</span> newly registered</p>
-            </div>
-          </p-card>
-        </div>
-        <!-- CARD 4 -->
-        <div class="col-12 md:col-6 lg:col-3">
-          <p-card>
-            <div class="card-header">
-              <span class="card-title">Comments</span>
-              <button pButton type="button" icon="pi pi-comments" title="coments"
-                class="p-button-rounded p-button-text p-button-sm cart-btn"></button>
-            </div>
-            <div class="card-content">
-              <h2 class="card-number">152 Unread</h2>
-              <p class="card-subtext"><span class="new-count">85</span> responded</p>
-            </div>
-          </p-card>
+        <div class="text-sm font-medium" [style.color]="p.color">
+          %{{ p.value }}
         </div>
       </div>
+      <p-progressBar
+        [value]="p.value"
+        [showValue]="false"
+        [style]="{ height: '8px' }"
+        [styleClass]="'custom-progress'"
+        [color]="p.color"
+      >
+      </p-progressBar>
+    </div>
+  </p-card>
+  <p-card header="Notifications" class="col-12 md:col-6">
+    <app-notifications
+      [notificationGroups]="notificationGroups"
+      [menuItems]="items"
+    ></app-notifications>
+  </p-card>
+</div>
