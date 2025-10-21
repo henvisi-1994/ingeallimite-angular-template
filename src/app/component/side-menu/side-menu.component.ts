@@ -1,64 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { AvatarModule } from 'primeng/avatar';
 import { BadgeModule } from 'primeng/badge';
 import { MenuModule } from 'primeng/menu';
 import { RippleModule } from 'primeng/ripple';
+import { DockModule } from 'primeng/dock';
+import { ButtonModule } from 'primeng/button';
+import { DockMenuComponent } from '../dock-menu/dock-menu.component';
+import { MenuStore } from '../../store/menu';
 
 @Component({
   selector: 'side-menu-component',
   standalone: true,
-  imports: [MenuModule, BadgeModule, RippleModule, AvatarModule],
+  imports: [
+    MenuModule,
+    BadgeModule,
+    RippleModule,
+    AvatarModule,
+    DockModule,
+    ButtonModule,
+    DockMenuComponent,
+  ],
   templateUrl: './side-menu.component.html',
-  styleUrl: './side-menu.component.scss'
+  styleUrl: './side-menu.component.scss',
 })
-export class SideMenuComponent implements OnInit{
-    items: MenuItem[] | undefined;
-
-    ngOnInit() {
-        this.items = [
-            {
-                separator: true
-            },
-            {
-                label: 'Documents',
-                items: [
-                    {
-                        label: 'New',
-                        icon: 'pi pi-plus',
-                        shortcut: '⌘+N'
-                    },
-                    {
-                        label: 'Search',
-                        icon: 'pi pi-search',
-                        shortcut: '⌘+S',
-                        visible:false
-                    }
-                ]
-            },
-            {
-                label: 'Profile',
-                items: [
-                    {
-                        label: 'Settings',
-                        icon: 'pi pi-cog',
-                        shortcut: '⌘+O'
-                    },
-                    {
-                        label: 'Messages',
-                        icon: 'pi pi-inbox',
-                        badge: '2'
-                    },
-                    {
-                        label: 'Logout',
-                        icon: 'pi pi-sign-out',
-                        shortcut: '⌘+Q'
-                    }
-                ]
-            },
-            {
-                separator: true
-            }
-        ];
-    }
+export class SideMenuComponent implements OnInit {
+  items: MenuItem[] | [] = [];
+  menu = inject(MenuStore);
+  ngOnInit() {
+    this.items = this.menu.links();
+  }
 }

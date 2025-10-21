@@ -79,7 +79,8 @@ main {
 
 .right-side {
   flex: 6;
-  min-width: 250px;
+  min-width: 75%;
+  margin-left: 2%;
 }
 
 /* Divider entre lados */
@@ -92,9 +93,12 @@ main {
 /* ---------- Responsive ---------- */
 @media screen and (max-width: 650px) {
   .content {
-    flex-direction: column;
     width: 90%;         /* más ancho en móviles */
-    gap: 1rem;
+    gap: 2.2rem;
+    margin-right: 20%;
+  }
+  .main{
+    padding: 0.2em; ;
   }
 
   .divider {
@@ -103,5 +107,11 @@ main {
     background: var(--red-to-pink-to-purple-horizontal-gradient);
     margin-block: 1rem;
   }
+  .right-side {
+  flex: 6;
+  min-width: 80%;
+  margin-left: 15%;
+  margin-right: 10%;
+}
 }
 

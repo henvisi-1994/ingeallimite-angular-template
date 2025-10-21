@@ -1,0 +1,8 @@
+<div class="simple-dock-container">
+  <div class="simple-dock">
+    <div class="simple-dock-item" *ngFor="let item of dockItems">
+      <i [class]="item.icon" class="simple-dock-icon"></i>
+      <span class="simple-dock-tooltip">{{ item.label }}</span>
+    </div>
+  </div>
+</div>

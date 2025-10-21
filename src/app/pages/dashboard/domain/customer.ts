@@ -1,22 +1,34 @@
+import { ModelBase } from '../../../shared/domain/modelBase';
+
 export interface Country {
-    name?: string;
-    code?: string;
+  name?: string;
+  code?: string;
 }
 
 export interface Representative {
-    name?: string;
-    image?: string;
+  name?: string;
+  image?: string;
 }
 
-export interface Customer {
-    id?: number;
-    name?: string;
-    country?: Country;
-    company?: string;
-    date?: string | Date;
-    status?: string;
-    activity?: number;
-    representative?: Representative;
-    verified?: boolean;
-    balance?: number;
+export class Customer extends ModelBase {
+  name?: string | null;
+  country?: Country | null;
+  company?: string | null;
+  date?: string | Date | null;
+  status?: string | null;
+  activity?: number | null;
+  representative?: Representative | null;
+  verified?: boolean;
+  balance?: number | null;
+  constructor() {
+    super();
+    this.name = null;
+    this.country = null;
+    this.date = null;
+    this.status = null;
+    this.activity = null;
+    this.representative = null;
+    this.verified = false;
+    this.balance = null;
+  }
 }

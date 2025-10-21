@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Customer } from '../../pages/dashboard/domain/customer';
 @Injectable({
   providedIn: 'root',
 })
 export class CustomerService {
-  getData() {
+  getData(): Customer[] {
     return [
       {
         id: 1000,
@@ -23,6 +24,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 70663,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1001,
@@ -41,6 +50,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 82429,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1002,
@@ -59,6 +76,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 28334,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1003,
@@ -77,6 +102,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 88521,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1004,
@@ -95,6 +128,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 93905,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1005,
@@ -113,6 +154,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 50041,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1006,
@@ -131,6 +180,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 58706,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1007,
@@ -149,6 +206,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 26640,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1008,
@@ -167,6 +232,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 65369,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1009,
@@ -185,6 +258,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 63451,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1010,
@@ -203,6 +284,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 71169,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1011,
@@ -221,6 +310,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 96842,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1012,
@@ -239,6 +336,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 92734,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1013,
@@ -257,6 +362,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 45250,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1014,
@@ -275,6 +388,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 30236,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1015,
@@ -293,6 +414,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 64533,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1016,
@@ -311,6 +440,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 37279,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1017,
@@ -329,6 +466,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 27381,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1018,
@@ -347,6 +492,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 9257,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1019,
@@ -365,6 +518,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 67783,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1020,
@@ -383,6 +544,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 4609,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1021,
@@ -401,6 +570,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 26565,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1022,
@@ -419,6 +596,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 75876,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1023,
@@ -437,6 +622,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 41121,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1024,
@@ -455,6 +648,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 91691,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1025,
@@ -473,6 +674,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 40137,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1026,
@@ -491,6 +700,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 21304,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1027,
@@ -509,6 +726,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 60454,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1028,
@@ -527,6 +752,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 17565,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1029,
@@ -545,6 +778,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 17774,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1030,
@@ -563,6 +804,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 49201,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1031,
@@ -581,6 +830,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 67126,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1032,
@@ -599,6 +856,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 76017,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1033,
@@ -617,6 +882,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 91201,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1034,
@@ -635,6 +908,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 12237,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1035,
@@ -653,6 +934,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 34072,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1036,
@@ -671,6 +960,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 94909,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1037,
@@ -689,6 +986,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 57245,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1038,
@@ -707,6 +1012,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 75502,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1039,
@@ -725,6 +1038,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 82075,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1040,
@@ -743,6 +1064,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 19208,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1041,
@@ -761,6 +1090,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 50194,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1042,
@@ -779,6 +1116,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 77714,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1043,
@@ -797,6 +1142,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 35740,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1044,
@@ -815,6 +1168,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 30790,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1045,
@@ -833,6 +1194,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 52343,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1046,
@@ -851,6 +1220,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 53966,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1047,
@@ -869,6 +1246,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 9920,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1048,
@@ -887,6 +1272,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 78069,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1049,
@@ -905,6 +1298,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 65005,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1050,
@@ -923,6 +1324,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 51038,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1051,
@@ -941,6 +1350,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 28218,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1052,
@@ -959,6 +1376,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 78527,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1053,
@@ -977,6 +1402,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 23381,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1054,
@@ -995,6 +1428,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 64821,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1055,
@@ -1013,6 +1454,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 55334,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1056,
@@ -1031,6 +1480,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 83391,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1057,
@@ -1049,6 +1506,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 31580,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1058,
@@ -1067,6 +1532,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 11723,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1059,
@@ -1085,6 +1558,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 8454,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1060,
@@ -1103,6 +1584,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 99235,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1061,
@@ -1121,6 +1610,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 15656,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1062,
@@ -1139,6 +1636,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 60586,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1063,
@@ -1157,6 +1662,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 86239,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1064,
@@ -1175,6 +1688,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 15621,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1065,
@@ -1193,6 +1714,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 77248,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1066,
@@ -1211,6 +1740,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 478,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1067,
@@ -1229,6 +1766,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 62505,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1068,
@@ -1247,6 +1792,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 91480,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1069,
@@ -1265,6 +1818,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 21671,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1070,
@@ -1283,6 +1844,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 13775,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1071,
@@ -1301,6 +1870,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 60253,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1072,
@@ -1319,6 +1896,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 75225,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1073,
@@ -1337,6 +1922,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 3308,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1074,
@@ -1355,6 +1948,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 19711,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1075,
@@ -1373,6 +1974,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 55110,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1076,
@@ -1391,6 +2000,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 62392,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1077,
@@ -1409,6 +2026,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 76530,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1078,
@@ -1427,6 +2052,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 7460,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1079,
@@ -1445,6 +2078,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 42251,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1080,
@@ -1463,6 +2104,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 36435,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1081,
@@ -1481,6 +2130,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 39197,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1082,
@@ -1499,6 +2156,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 72707,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1083,
@@ -1517,6 +2182,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 97965,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1084,
@@ -1535,6 +2208,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 5823,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1085,
@@ -1553,6 +2234,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 96471,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1086,
@@ -1571,6 +2260,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 33710,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1087,
@@ -1589,6 +2286,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 30611,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1088,
@@ -1607,6 +2312,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 32960,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1089,
@@ -1625,6 +2338,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 57423,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1090,
@@ -1643,6 +2364,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 23027,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1091,
@@ -1661,6 +2390,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 84182,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1092,
@@ -1679,6 +2416,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 25237,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1093,
@@ -1697,6 +2442,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 87736,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1094,
@@ -1715,6 +2468,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 38674,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1095,
@@ -1733,6 +2494,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 67762,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1096,
@@ -1751,6 +2520,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 81299,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1097,
@@ -1769,6 +2546,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 64794,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1098,
@@ -1787,6 +2572,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 7815,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1099,
@@ -1805,6 +2598,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 37976,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1100,
@@ -1823,6 +2624,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 59594,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1101,
@@ -1841,6 +2650,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 92528,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1102,
@@ -1859,6 +2676,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 58964,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1103,
@@ -1877,6 +2702,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 65860,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1104,
@@ -1895,6 +2728,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 63863,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1105,
@@ -1913,6 +2754,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 37510,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1106,
@@ -1931,6 +2780,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 63876,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1107,
@@ -1949,6 +2806,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 93263,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1108,
@@ -1967,6 +2832,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 57198,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1109,
@@ -1985,6 +2858,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 89147,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1110,
@@ -2003,6 +2884,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 41466,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1111,
@@ -2021,6 +2910,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 38918,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1112,
@@ -2039,6 +2936,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 11397,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1113,
@@ -2057,6 +2962,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 40930,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1114,
@@ -2075,6 +2988,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 40847,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1115,
@@ -2093,6 +3014,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 27832,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1116,
@@ -2111,6 +3040,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 89060,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1117,
@@ -2129,6 +3066,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 52474,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1118,
@@ -2147,6 +3092,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 19094,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1119,
@@ -2165,6 +3118,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 93756,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1120,
@@ -2183,6 +3144,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 77388,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1121,
@@ -2201,6 +3170,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 48759,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1122,
@@ -2219,6 +3196,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 37568,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1123,
@@ -2237,6 +3222,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 4477,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1124,
@@ -2255,6 +3248,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 13764,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1125,
@@ -2273,6 +3274,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 68222,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1126,
@@ -2291,6 +3300,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 29164,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1127,
@@ -2309,6 +3326,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 61651,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1128,
@@ -2327,6 +3352,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 79938,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1129,
@@ -2345,6 +3378,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 44037,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1130,
@@ -2363,6 +3404,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 89918,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1131,
@@ -2381,6 +3430,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 32372,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1132,
@@ -2399,6 +3456,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 46478,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1133,
@@ -2417,6 +3482,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 30674,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1134,
@@ -2435,6 +3508,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 47714,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1135,
@@ -2453,6 +3534,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 14307,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1136,
@@ -2471,6 +3560,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 82069,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1137,
@@ -2489,6 +3586,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 11182,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1138,
@@ -2507,6 +3612,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 17126,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1139,
@@ -2525,6 +3638,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 19724,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1140,
@@ -2543,6 +3664,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 91888,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1141,
@@ -2561,6 +3690,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 15016,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1142,
@@ -2579,6 +3716,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 23118,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1143,
@@ -2597,6 +3742,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 90560,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1144,
@@ -2615,6 +3768,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 34155,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1145,
@@ -2633,6 +3794,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 6350,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1146,
@@ -2651,6 +3820,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 77641,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1147,
@@ -2669,6 +3846,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 43289,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1148,
@@ -2687,6 +3872,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 85657,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1149,
@@ -2705,6 +3898,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 82733,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1150,
@@ -2723,6 +3924,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 38004,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1151,
@@ -2741,6 +3950,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 29038,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1152,
@@ -2759,6 +3976,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 75123,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1153,
@@ -2777,6 +4002,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 33214,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1154,
@@ -2795,6 +4028,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 80651,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1155,
@@ -2813,6 +4054,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 5085,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1156,
@@ -2831,6 +4080,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 93021,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1157,
@@ -2849,6 +4106,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 37287,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1158,
@@ -2867,6 +4132,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 73070,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1159,
@@ -2885,6 +4158,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 64422,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1160,
@@ -2903,6 +4184,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 36826,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1161,
@@ -2921,6 +4210,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 93101,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1162,
@@ -2939,6 +4236,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 60177,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1163,
@@ -2957,6 +4262,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 47198,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1164,
@@ -2975,6 +4288,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 71305,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1165,
@@ -2993,6 +4314,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 17526,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1166,
@@ -3011,6 +4340,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 16596,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1167,
@@ -3029,6 +4366,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 56870,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1168,
@@ -3047,6 +4392,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 82928,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1169,
@@ -3065,6 +4418,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 64181,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1170,
@@ -3083,6 +4444,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 30561,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1171,
@@ -3101,6 +4470,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 24617,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1172,
@@ -3119,6 +4496,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 77860,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1173,
@@ -3137,6 +4522,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 25664,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1174,
@@ -3155,6 +4548,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 98113,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1175,
@@ -3173,6 +4574,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 14763,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1176,
@@ -3191,6 +4600,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 31317,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1177,
@@ -3209,6 +4626,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 30883,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1178,
@@ -3227,6 +4652,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 93785,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1179,
@@ -3245,6 +4678,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 68380,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1180,
@@ -3263,6 +4704,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 93454,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1181,
@@ -3281,6 +4730,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 30570,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1182,
@@ -3299,6 +4756,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 79506,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1183,
@@ -3317,6 +4782,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 8654,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1184,
@@ -3335,6 +4808,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 13368,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1185,
@@ -3353,6 +4834,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 92631,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1186,
@@ -3371,6 +4860,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 4989,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1187,
@@ -3389,6 +4886,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 77668,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1188,
@@ -3407,6 +4912,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 3525,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1189,
@@ -3425,6 +4938,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 45838,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1190,
@@ -3443,6 +4964,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 49148,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1191,
@@ -3461,6 +4990,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 96709,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1192,
@@ -3479,6 +5016,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 23253,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1193,
@@ -3497,6 +5042,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 40836,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1194,
@@ -3515,6 +5068,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 60719,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1195,
@@ -3533,6 +5094,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 17419,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1196,
@@ -3551,6 +5120,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 94052,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1197,
@@ -3569,6 +5146,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 54241,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1198,
@@ -3587,6 +5172,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 87668,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1199,
@@ -3605,6 +5198,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 99417,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1200,
@@ -3623,6 +5224,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 89792,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1201,
@@ -3641,6 +5250,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 42356,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1202,
@@ -3659,6 +5276,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 90979,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1203,
@@ -3677,6 +5302,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 45082,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1204,
@@ -3695,6 +5328,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 9871,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1205,
@@ -3713,6 +5354,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 47043,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1206,
@@ -3731,6 +5380,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 92763,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1207,
@@ -3749,6 +5406,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 18075,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1208,
@@ -3767,6 +5432,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 34393,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1209,
@@ -3785,6 +5458,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 16410,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1210,
@@ -3803,6 +5484,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 1017,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1211,
@@ -3821,6 +5510,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 77843,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1212,
@@ -3839,6 +5536,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 30549,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1213,
@@ -3857,6 +5562,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 51738,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1214,
@@ -3875,6 +5588,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 13111,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1215,
@@ -3893,6 +5614,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 85802,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1216,
@@ -3911,6 +5640,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 89221,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1217,
@@ -3929,6 +5666,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 32661,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1218,
@@ -3947,6 +5692,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 18809,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1219,
@@ -3965,6 +5718,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 94374,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1220,
@@ -3983,6 +5744,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 45436,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1221,
@@ -4001,6 +5770,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 72645,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1222,
@@ -4019,6 +5796,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 61023,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1223,
@@ -4037,6 +5822,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 13685,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1224,
@@ -4055,6 +5848,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 84436,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1225,
@@ -4073,6 +5874,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 61860,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1226,
@@ -4091,6 +5900,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 76679,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1227,
@@ -4109,6 +5926,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 14959,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1228,
@@ -4127,6 +5952,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 14174,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1229,
@@ -4145,6 +5978,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 80328,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1230,
@@ -4163,6 +6004,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 56392,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1231,
@@ -4181,6 +6030,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 17176,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1232,
@@ -4199,6 +6056,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 90141,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1233,
@@ -4217,6 +6082,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 38187,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1234,
@@ -4235,6 +6108,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 35596,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1235,
@@ -4253,6 +6134,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 73926,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1236,
@@ -4271,6 +6160,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 38375,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1237,
@@ -4289,6 +6186,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 35932,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1238,
@@ -4307,6 +6212,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 28331,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1239,
@@ -4325,6 +6238,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 33549,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1240,
@@ -4343,6 +6264,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 63860,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1241,
@@ -4361,6 +6290,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 34992,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1242,
@@ -4379,6 +6316,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 97068,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1243,
@@ -4397,6 +6342,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 2316,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1244,
@@ -4415,6 +6368,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 89374,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1245,
@@ -4433,6 +6394,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 51152,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1246,
@@ -4451,6 +6420,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 39848,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1247,
@@ -4469,6 +6446,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 35060,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1248,
@@ -4487,6 +6472,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 23037,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1249,
@@ -4505,6 +6498,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 35637,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1250,
@@ -4523,6 +6524,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 70379,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1251,
@@ -4541,6 +6550,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 99271,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1252,
@@ -4559,6 +6576,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 69658,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1253,
@@ -4577,6 +6602,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 78159,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1254,
@@ -4595,6 +6628,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 84097,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1255,
@@ -4613,6 +6654,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 54606,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1256,
@@ -4631,6 +6680,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 2730,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1257,
@@ -4649,6 +6706,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 71836,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1258,
@@ -4667,6 +6732,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 37044,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1259,
@@ -4685,6 +6758,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 5990,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1260,
@@ -4703,6 +6784,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 7878,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1261,
@@ -4721,6 +6810,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 38077,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1262,
@@ -4739,6 +6836,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 24537,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1263,
@@ -4757,6 +6862,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 19164,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1264,
@@ -4775,6 +6888,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 21880,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1265,
@@ -4793,6 +6914,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 14975,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1266,
@@ -4811,6 +6940,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 28001,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1267,
@@ -4829,6 +6966,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 44811,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1268,
@@ -4847,6 +6992,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 70963,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1269,
@@ -4865,6 +7018,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 27808,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1270,
@@ -4883,6 +7044,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 41216,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1271,
@@ -4901,6 +7070,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 8819,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1272,
@@ -4919,6 +7096,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 77610,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1273,
@@ -4937,6 +7122,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 80612,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1274,
@@ -4955,6 +7148,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 45311,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1275,
@@ -4973,6 +7174,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 88737,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1276,
@@ -4991,6 +7200,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 13224,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1277,
@@ -5009,6 +7226,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 64656,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1278,
@@ -5027,6 +7252,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 61947,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1279,
@@ -5045,6 +7278,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 6380,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1280,
@@ -5063,6 +7304,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 80112,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1281,
@@ -5081,6 +7330,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 42038,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1282,
@@ -5099,6 +7356,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 36052,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1283,
@@ -5117,6 +7382,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 51660,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1284,
@@ -5135,6 +7408,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 56142,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1285,
@@ -5153,6 +7434,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 21631,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1286,
@@ -5171,6 +7460,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 59171,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1287,
@@ -5189,6 +7486,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 97858,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1288,
@@ -5207,6 +7512,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 90388,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1289,
@@ -5225,6 +7538,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 68632,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1290,
@@ -5243,6 +7564,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 95552,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1291,
@@ -5261,6 +7590,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 39725,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1292,
@@ -5279,6 +7616,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 62251,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1293,
@@ -5297,6 +7642,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 73523,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1294,
@@ -5315,6 +7668,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 41331,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1295,
@@ -5333,6 +7694,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 24208,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1296,
@@ -5351,6 +7720,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 56409,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1297,
@@ -5369,6 +7746,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 70025,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1298,
@@ -5387,6 +7772,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 88115,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1299,
@@ -5405,6 +7798,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 69703,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1300,
@@ -5423,6 +7824,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 10718,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1301,
@@ -5441,6 +7850,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 29825,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1302,
@@ -5459,6 +7876,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 90351,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1303,
@@ -5477,6 +7902,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 75682,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1304,
@@ -5495,6 +7928,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 74935,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1305,
@@ -5513,6 +7954,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 5254,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1306,
@@ -5531,6 +7980,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 37306,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1307,
@@ -5549,6 +8006,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 70520,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1308,
@@ -5567,6 +8032,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 74510,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1309,
@@ -5585,6 +8058,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 74410,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1310,
@@ -5603,6 +8084,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 56116,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1311,
@@ -5621,6 +8110,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 46518,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1312,
@@ -5639,6 +8136,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 92213,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1313,
@@ -5657,6 +8162,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 6405,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1314,
@@ -5675,6 +8188,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 92900,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1315,
@@ -5693,6 +8214,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 86727,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1316,
@@ -5711,6 +8240,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 48040,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1317,
@@ -5729,6 +8266,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 24026,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1318,
@@ -5747,6 +8292,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 76388,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1319,
@@ -5765,6 +8318,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 89068,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1320,
@@ -5783,6 +8344,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 12727,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1321,
@@ -5801,6 +8370,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 83411,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1322,
@@ -5819,6 +8396,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 44242,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1323,
@@ -5837,6 +8422,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 5644,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1324,
@@ -5855,6 +8448,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 29321,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1325,
@@ -5873,6 +8474,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 13353,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1326,
@@ -5891,6 +8500,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 53454,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1327,
@@ -5909,6 +8526,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 30074,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1328,
@@ -5927,6 +8552,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 36310,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1329,
@@ -5945,6 +8578,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 27563,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1330,
@@ -5963,6 +8604,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 45163,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1331,
@@ -5981,6 +8630,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 52970,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1332,
@@ -5999,6 +8656,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 18922,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1333,
@@ -6017,6 +8682,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 59632,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1334,
@@ -6035,6 +8708,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 6733,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1335,
@@ -6053,6 +8734,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 22704,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1336,
@@ -6071,6 +8760,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 82613,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1337,
@@ -6089,6 +8786,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 97960,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1338,
@@ -6107,6 +8812,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 63123,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1339,
@@ -6125,6 +8838,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 38090,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1340,
@@ -6143,6 +8864,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 58826,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1341,
@@ -6161,6 +8890,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 22419,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1342,
@@ -6179,6 +8916,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 86006,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1343,
@@ -6197,6 +8942,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 40641,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1344,
@@ -6215,6 +8968,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 73493,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1345,
@@ -6233,6 +8994,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 87704,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1346,
@@ -6251,6 +9020,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 19662,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1347,
@@ -6269,6 +9046,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 80534,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1348,
@@ -6287,6 +9072,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 19473,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1349,
@@ -6305,6 +9098,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 89796,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1350,
@@ -6323,6 +9124,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 54429,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1351,
@@ -6341,6 +9150,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 16134,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1352,
@@ -6359,6 +9176,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 9173,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1353,
@@ -6377,6 +9202,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 42857,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1354,
@@ -6395,6 +9228,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 54300,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1355,
@@ -6413,6 +9254,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 94652,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1356,
@@ -6431,6 +9280,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 88295,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1357,
@@ -6449,6 +9306,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 92710,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1358,
@@ -6467,6 +9332,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 25145,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1359,
@@ -6485,6 +9358,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 61630,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1360,
@@ -6503,6 +9384,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 66134,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1361,
@@ -6521,6 +9410,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 14822,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1362,
@@ -6539,6 +9436,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 17759,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1363,
@@ -6557,6 +9462,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 14922,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1364,
@@ -6575,6 +9488,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 96575,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1365,
@@ -6593,6 +9514,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 5847,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1366,
@@ -6611,6 +9540,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 22929,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1367,
@@ -6629,6 +9566,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 31837,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1368,
@@ -6647,6 +9592,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 27095,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1369,
@@ -6665,6 +9618,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 43696,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1370,
@@ -6683,6 +9644,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 79897,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1371,
@@ -6701,6 +9670,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 27264,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1372,
@@ -6719,6 +9696,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 16490,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1373,
@@ -6737,6 +9722,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 21990,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1374,
@@ -6755,6 +9748,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 11918,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1375,
@@ -6773,6 +9774,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 13268,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1376,
@@ -6791,6 +9800,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 15941,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1377,
@@ -6809,6 +9826,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 53132,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1378,
@@ -6827,6 +9852,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 47531,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1379,
@@ -6845,6 +9878,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 88950,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1380,
@@ -6863,6 +9904,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 88497,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1381,
@@ -6881,6 +9930,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 60634,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1382,
@@ -6899,6 +9956,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 21164,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1383,
@@ -6917,6 +9982,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 83645,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1384,
@@ -6935,6 +10008,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 32433,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1385,
@@ -6953,6 +10034,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 96983,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1386,
@@ -6971,6 +10060,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 72211,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1387,
@@ -6989,6 +10086,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 40262,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1388,
@@ -7007,6 +10112,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 91139,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1389,
@@ -7025,6 +10138,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 79659,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1390,
@@ -7043,6 +10164,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 93576,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1391,
@@ -7061,6 +10190,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 93576,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1392,
@@ -7079,6 +10216,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 93576,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1393,
@@ -7097,6 +10242,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 2009,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1394,
@@ -7115,6 +10268,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 35341,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1395,
@@ -7133,6 +10294,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 13077,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1396,
@@ -7151,6 +10320,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 83423,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1397,
@@ -7169,6 +10346,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 14350,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1398,
@@ -7187,6 +10372,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 98864,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1399,
@@ -7205,6 +10398,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 29326,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1400,
@@ -7223,6 +10424,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 81198,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1401,
@@ -7241,6 +10450,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 82391,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1402,
@@ -7259,6 +10476,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 48071,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1403,
@@ -7277,6 +10502,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 14593,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1404,
@@ -7295,6 +10528,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 8750,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1405,
@@ -7313,6 +10554,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 39655,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1406,
@@ -7331,6 +10580,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 71713,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1407,
@@ -7349,6 +10606,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 81056,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1408,
@@ -7367,6 +10632,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 34220,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1409,
@@ -7385,6 +10658,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 21459,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1410,
@@ -7403,6 +10684,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 51281,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1411,
@@ -7421,6 +10710,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 53841,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1412,
@@ -7439,6 +10736,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 34878,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1413,
@@ -7457,6 +10762,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 85399,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1414,
@@ -7475,6 +10788,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 29237,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1415,
@@ -7493,6 +10814,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 12179,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1416,
@@ -7511,6 +10840,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 27840,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1417,
@@ -7529,6 +10866,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 51958,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1418,
@@ -7547,6 +10892,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 33138,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1419,
@@ -7565,6 +10918,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 82539,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1420,
@@ -7583,6 +10944,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 5619,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1421,
@@ -7601,6 +10970,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 44763,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1422,
@@ -7619,6 +10996,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 97208,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1423,
@@ -7637,6 +11022,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 93316,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1424,
@@ -7655,6 +11048,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 23786,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1425,
@@ -7673,6 +11074,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 98367,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1426,
@@ -7691,6 +11100,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 68683,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1427,
@@ -7709,6 +11126,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 85602,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1428,
@@ -7727,6 +11152,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 14402,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1429,
@@ -7745,6 +11178,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 81608,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1430,
@@ -7763,6 +11204,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 15573,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1431,
@@ -7781,6 +11230,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 50121,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1432,
@@ -7799,6 +11256,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 93911,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1433,
@@ -7817,6 +11282,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 66383,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1434,
@@ -7835,6 +11308,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 89183,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1435,
@@ -7853,6 +11334,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 9752,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1436,
@@ -7871,6 +11360,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 2623,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1437,
@@ -7889,6 +11386,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 87620,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1438,
@@ -7907,6 +11412,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 14625,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1439,
@@ -7925,6 +11438,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 39339,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1440,
@@ -7943,6 +11464,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 77704,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1441,
@@ -7961,6 +11490,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 75326,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1442,
@@ -7979,6 +11516,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 71364,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1443,
@@ -7997,6 +11542,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 73360,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1444,
@@ -8015,6 +11568,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 59442,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1445,
@@ -8033,6 +11594,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 84338,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1446,
@@ -8051,6 +11620,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 72545,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1447,
@@ -8069,6 +11646,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 53307,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1448,
@@ -8087,6 +11672,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 12178,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1449,
@@ -8105,6 +11698,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 35576,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1450,
@@ -8123,6 +11724,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 20507,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1451,
@@ -8141,6 +11750,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 56415,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1452,
@@ -8159,6 +11776,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 33427,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1453,
@@ -8177,6 +11802,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 44004,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1454,
@@ -8195,6 +11828,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 37227,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1455,
@@ -8213,6 +11854,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 44560,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1456,
@@ -8231,6 +11880,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 50922,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1457,
@@ -8249,6 +11906,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 61262,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1458,
@@ -8267,6 +11932,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 13459,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1459,
@@ -8285,6 +11958,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 52299,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1460,
@@ -8303,6 +11984,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 61040,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1461,
@@ -8321,6 +12010,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 91297,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1462,
@@ -8339,6 +12036,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 39947,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1463,
@@ -8357,6 +12062,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 78224,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1464,
@@ -8375,6 +12088,14 @@ export class CustomerService {
           image: 'elwinsharvill.png',
         },
         balance: 22727,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1465,
@@ -8393,6 +12114,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 70650,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1466,
@@ -8411,6 +12140,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 45956,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1467,
@@ -8429,6 +12166,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 72627,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1468,
@@ -8447,6 +12192,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 80176,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1469,
@@ -8465,6 +12218,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 97227,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1470,
@@ -8483,6 +12244,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 63121,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1471,
@@ -8501,6 +12270,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 44726,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1472,
@@ -8519,6 +12296,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 70748,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1473,
@@ -8537,6 +12322,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 71061,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1474,
@@ -8555,6 +12348,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 7486,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1475,
@@ -8573,6 +12374,14 @@ export class CustomerService {
           image: 'bernardodominic.png',
         },
         balance: 58495,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1476,
@@ -8591,6 +12400,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 96252,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1477,
@@ -8609,6 +12426,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 71454,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1478,
@@ -8627,6 +12452,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 81894,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1479,
@@ -8645,6 +12478,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 31601,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1480,
@@ -8663,6 +12504,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 12090,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1481,
@@ -8681,6 +12530,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 24073,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1482,
@@ -8699,6 +12556,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 35129,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1483,
@@ -8717,6 +12582,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 25518,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1484,
@@ -8735,6 +12608,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 7300,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1485,
@@ -8753,6 +12634,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 82949,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1486,
@@ -8771,6 +12660,14 @@ export class CustomerService {
           image: 'annafali.png',
         },
         balance: 25044,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1487,
@@ -8789,6 +12686,14 @@ export class CustomerService {
           image: 'xuxuefeng.png',
         },
         balance: 97553,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1488,
@@ -8807,6 +12712,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 38294,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1489,
@@ -8825,6 +12738,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 56617,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1490,
@@ -8843,6 +12764,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 76817,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1491,
@@ -8861,6 +12790,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 80787,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1492,
@@ -8879,6 +12816,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 4158,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1493,
@@ -8897,6 +12842,14 @@ export class CustomerService {
           image: 'ivanmagalhaes.png',
         },
         balance: 66993,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1494,
@@ -8915,6 +12868,14 @@ export class CustomerService {
           image: 'asiyajavayant.png',
         },
         balance: 53330,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1495,
@@ -8933,6 +12894,14 @@ export class CustomerService {
           image: 'ionibowcher.png',
         },
         balance: 72342,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1496,
@@ -8951,6 +12920,14 @@ export class CustomerService {
           image: 'stephenshaw.png',
         },
         balance: 53660,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1497,
@@ -8969,6 +12946,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 44528,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1498,
@@ -8987,6 +12972,14 @@ export class CustomerService {
           image: 'onyamalimba.png',
         },
         balance: 69613,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
       {
         id: 1499,
@@ -9005,6 +12998,14 @@ export class CustomerService {
           image: 'amyelsner.png',
         },
         balance: 88090,
+        created_at: null,
+        updated_at: null,
+        hydrate: function (data: any) {
+          Object.assign(this, data);
+        },
+        createCopy: function () {
+          return JSON.parse(JSON.stringify(this));
+        },
       },
     ];
   }

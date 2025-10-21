@@ -41,8 +41,8 @@ import { PRODUCTS, CARDS, NOTIFICATION_GROUPS, MENU_ITEMS } from './data/dashboa
     ProgressBarModule,
     AvatarModule,
     GenericTableComponent,
-    NotificationsComponent,
-  ],
+    NotificationsComponent
+],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
   providers: [CustomerService],
