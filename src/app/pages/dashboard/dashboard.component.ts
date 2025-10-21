@@ -14,8 +14,8 @@ import { ProgressBarModule } from 'primeng/progressbar';
 
 // App domain/service
 import { Customer } from './domain/customer';
-import { CustomerService } from '../../service/dashboard/customer.service';
-import { ChartService } from '../../service/shared/chart.service';
+import { CustomerService } from './infraestructure/customer.service';
+import { ChartService } from '../../shared/infraestructure/chart.service';
 import { GenericTableComponent } from '../../component/generic-table/generic-table.component';
 import { NotificationsComponent } from '../../component/notifications/notifications.component';
 import { CustomerColumns } from './infraestructure/customerColumns';

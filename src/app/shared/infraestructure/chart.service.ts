@@ -1,6 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
 import { inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { ChartConfig, ChartData, ChartDataset, ChartOptions, ChartResponse } from '../../shared/domain/chartDataset';
+import { ChartConfig, ChartData, ChartDataset, ChartOptions, ChartResponse } from '../domain/chartDataset';
 
 @Injectable({
   providedIn: 'root'
