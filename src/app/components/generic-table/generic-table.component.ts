@@ -8,19 +8,18 @@ import { InputIconModule } from 'primeng/inputicon';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
-  selector: 'app-generic-table',
-  standalone: true,
-  imports: [
-    CommonModule,
-    TableModule,
-    InputTextModule,
-    TagModule,
-    IconFieldModule,
-    InputIconModule,
-    ButtonModule
-  ],
-  templateUrl: './generic-table.component.html',
-  styleUrls: ['./generic-table.component.scss']
+    selector: 'app-generic-table',
+    imports: [
+        CommonModule,
+        TableModule,
+        InputTextModule,
+        TagModule,
+        IconFieldModule,
+        InputIconModule,
+        ButtonModule
+    ],
+    templateUrl: './generic-table.component.html',
+    styleUrls: ['./generic-table.component.scss']
 })
 export class GenericTableComponent {
   @Input() data: any[] = [];

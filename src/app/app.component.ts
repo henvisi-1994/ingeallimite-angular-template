@@ -9,11 +9,10 @@ import { AvatarModule } from 'primeng/avatar';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet,SideMenuComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [RouterOutlet, SideMenuComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
 }

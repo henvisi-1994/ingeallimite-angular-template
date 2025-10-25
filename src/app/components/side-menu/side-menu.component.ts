@@ -10,19 +10,18 @@ import { DockMenuComponent } from '../dock-menu/dock-menu.component';
 import { MenuStore } from '../../store/menu';
 
 @Component({
-  selector: 'side-menu-component',
-  standalone: true,
-  imports: [
-    MenuModule,
-    BadgeModule,
-    RippleModule,
-    AvatarModule,
-    DockModule,
-    ButtonModule,
-    DockMenuComponent,
-  ],
-  templateUrl: './side-menu.component.html',
-  styleUrl: './side-menu.component.scss',
+    selector: 'side-menu-component',
+    imports: [
+        MenuModule,
+        BadgeModule,
+        RippleModule,
+        AvatarModule,
+        DockModule,
+        ButtonModule,
+        DockMenuComponent,
+    ],
+    templateUrl: './side-menu.component.html',
+    styleUrl: './side-menu.component.scss'
 })
 export class SideMenuComponent implements OnInit {
   items: MenuItem[] | [] = [];

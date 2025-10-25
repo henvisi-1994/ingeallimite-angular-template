@@ -6,11 +6,10 @@ import { DockModule } from 'primeng/dock';
 import { RadioButtonModule } from 'primeng/radiobutton';
 
 @Component({
-  selector: 'dock-menu',
-  standalone: true,
-  imports: [DockModule, RadioButtonModule, CommonModule, FormsModule],
-  templateUrl: './dock-menu.component.html',
-  styleUrl: './dock-menu.component.scss'
+    selector: 'dock-menu',
+    imports: [DockModule, RadioButtonModule, CommonModule, FormsModule],
+    templateUrl: './dock-menu.component.html',
+    styleUrl: './dock-menu.component.scss'
 })
 export class DockMenuComponent implements OnInit {
     // Recibe los items del menú lateral

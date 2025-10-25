@@ -25,27 +25,26 @@ import { AvatarModule } from 'primeng/avatar';
 import { PRODUCTS, CARDS, NOTIFICATION_GROUPS, MENU_ITEMS } from './data/dashboardData';
 
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  imports: [
-    CommonModule,
-    HttpClientModule,
-    CardModule,
-    ButtonModule,
-    InputTextModule,
-    TagModule,
-    IconFieldModule,
-    InputIconModule,
-    ChartModule,
-    MenuModule,
-    ProgressBarModule,
-    AvatarModule,
-    GenericTableComponent,
-    NotificationsComponent
-],
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
-  providers: [CustomerService],
+    selector: 'app-dashboard',
+    imports: [
+        CommonModule,
+        HttpClientModule,
+        CardModule,
+        ButtonModule,
+        InputTextModule,
+        TagModule,
+        IconFieldModule,
+        InputIconModule,
+        ChartModule,
+        MenuModule,
+        ProgressBarModule,
+        AvatarModule,
+        GenericTableComponent,
+        NotificationsComponent
+    ],
+    templateUrl: './dashboard.component.html',
+    styleUrls: ['./dashboard.component.scss'],
+    providers: [CustomerService]
 })
 export class DashboardComponent implements OnInit {
  private readonly cd = inject(ChangeDetectorRef);

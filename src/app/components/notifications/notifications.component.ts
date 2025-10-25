@@ -6,11 +6,10 @@ import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-notifications',
-  standalone: true,
-  imports: [CommonModule, MenuModule, ButtonModule],
-  templateUrl: './notifications.component.html',
-  styleUrls: ['./notifications.component.scss'],
+    selector: 'app-notifications',
+    imports: [CommonModule, MenuModule, ButtonModule],
+    templateUrl: './notifications.component.html',
+    styleUrls: ['./notifications.component.scss']
 })
 export class NotificationsComponent {
   /**
