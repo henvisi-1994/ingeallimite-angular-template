@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { Table, TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
@@ -10,14 +10,13 @@ import { ButtonModule } from 'primeng/button';
 @Component({
     selector: 'app-generic-table',
     imports: [
-        CommonModule,
-        TableModule,
-        InputTextModule,
-        TagModule,
-        IconFieldModule,
-        InputIconModule,
-        ButtonModule
-    ],
+    TableModule,
+    InputTextModule,
+    TagModule,
+    IconFieldModule,
+    InputIconModule,
+    ButtonModule
+],
     templateUrl: './generic-table.component.html',
     styleUrls: ['./generic-table.component.scss']
 })

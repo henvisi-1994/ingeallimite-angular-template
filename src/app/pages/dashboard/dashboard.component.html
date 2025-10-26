@@ -1,6 +1,7 @@
-<div class="grid">
-  <!-- === CARDS === -->
-  <div class="col-12 md:col-6 lg:col-3" *ngFor="let card of cards">
+<!-- === SECCIÓN DE CARDS SUPERIORES === -->
+<div class="grid ">
+  @for (card of cards; track card) {
+   <div class="col-12 md:col-6 lg:col-3" >
     <p-card>
       <div class="card-header">
         <span class="card-title">{{ card.title }}</span>
@@ -18,58 +19,73 @@
       </div>
     </p-card>
   </div>
+  }
 </div>
-<div class="grid">
-  <p-card header="Customer" class="col-12 md:col-6">
-    <app-generic-table
-      [data]="customers"
-      [columns]="columns"
-      [globalFilterFields]="filters"
-      (selectionChange)="selectedCustomer = $event"
-    ></app-generic-table>
-  </p-card>
-  <p-card header="Revenue Stream" class="col-12 md:col-6">
-    <p-chart type="bar" [data]="data" [options]="options" class="h-[30rem]" />
-  </p-card>
+
+<!-- === TABLA Y GRÁFICO === -->
+<div class="grid  mt-4">
+  <div class="col-12 md:col-6">
+    <p-card header="Customer" class="h-full">
+      <app-generic-table
+        [data]="customers"
+        [columns]="columns"
+        [globalFilterFields]="filters"
+        (selectionChange)="selectedCustomer = $event"
+      ></app-generic-table>
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-card header="Revenue Stream" class="h-full">
+      <p-chart type="bar" [data]="data" [options]="options" class="h-[30rem]" />
+    </p-card>
+  </div>
 </div>
-<div class="grid">
-  <p-card header="Best Selling Products" class="col-12 md:col-6">
 
-    <div class="flex justify-content-end mb-3">
-      <p-menu #menu [popup]="true" [model]="items"></p-menu>
-      <button
-        pButton
-        type="button"
-        icon="pi pi-ellipsis-v"
-        class="p-button-text"
-        (click)="menu.toggle($event)"
-      ></button>
-    </div>
-
-    <div *ngFor="let p of products" class="product-row">
-      <div class="flex justify-content-between align-items-center mb-3">
-        <div>
-          <div class="font-medium text-900">{{ p.name }}</div>
-          <div class="text-500 text-sm">{{ p.category }}</div>
-        </div>
-        <div class="text-sm font-medium" [style.color]="p.color">
-          %{{ p.value }}
-        </div>
+<!-- === PRODUCTOS Y NOTIFICACIONES === -->
+<div class="grid mt-4">
+  <div class="col-12 md:col-6">
+    <p-card header="Best Selling Products" class="h-full">
+      <div class="flex justify-content-end mb-3">
+        <p-menu #menu [popup]="true" [model]="items"></p-menu>
+        <button
+          pButton
+          type="button"
+          icon="pi pi-ellipsis-v"
+          class="p-button-text"
+          (click)="menu.toggle($event)"
+        ></button>
       </div>
-      <p-progressBar
-        [value]="p.value"
-        [showValue]="false"
-        [style]="{ height: '8px' }"
-        [styleClass]="'custom-progress'"
-        [color]="p.color"
-      >
-      </p-progressBar>
-    </div>
-  </p-card>
-  <p-card header="Notifications" class="col-12 md:col-6">
-    <app-notifications
-      [notificationGroups]="notificationGroups"
-      [menuItems]="items"
-    ></app-notifications>
-  </p-card>
+
+      @for (p of products; track p) {
+        <div class="mb-3">
+          <div class="flex justify-content-between align-items-center mb-2">
+            <div>
+              <div class="font-medium text-900">{{ p.name }}</div>
+              <div class="text-500 text-sm">{{ p.category }}</div>
+            </div>
+            <div class="text-sm font-medium" [style.color]="p.color">
+              %{{ p.value }}
+            </div>
+          </div>
+          <p-progressBar
+            [value]="p.value"
+            [showValue]="false"
+            [style]="{ height: '8px' }"
+            [styleClass]="'custom-progress'"
+            [color]="p.color"
+          ></p-progressBar>
+        </div>
+      }
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-card header="Notifications" class="h-full">
+      <app-notifications
+        [notificationGroups]="notificationGroups"
+        [menuItems]="items"
+      ></app-notifications>
+    </p-card>
+  </div>
 </div>

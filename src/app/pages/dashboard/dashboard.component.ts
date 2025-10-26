@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { HttpClientModule } from '@angular/common/http';
 
 // PrimeNG modules
@@ -27,21 +27,20 @@ import { PRODUCTS, CARDS, NOTIFICATION_GROUPS, MENU_ITEMS } from './data/dashboa
 @Component({
     selector: 'app-dashboard',
     imports: [
-        CommonModule,
-        HttpClientModule,
-        CardModule,
-        ButtonModule,
-        InputTextModule,
-        TagModule,
-        IconFieldModule,
-        InputIconModule,
-        ChartModule,
-        MenuModule,
-        ProgressBarModule,
-        AvatarModule,
-        GenericTableComponent,
-        NotificationsComponent
-    ],
+    HttpClientModule,
+    CardModule,
+    ButtonModule,
+    InputTextModule,
+    TagModule,
+    IconFieldModule,
+    InputIconModule,
+    ChartModule,
+    MenuModule,
+    ProgressBarModule,
+    AvatarModule,
+    GenericTableComponent,
+    NotificationsComponent
+],
     templateUrl: './dashboard.component.html',
     styleUrls: ['./dashboard.component.scss'],
     providers: [CustomerService]

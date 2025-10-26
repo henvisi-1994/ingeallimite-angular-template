@@ -12,19 +12,18 @@
   </div>
 
   <!-- Grupos de notificaciones -->
-  <ng-container *ngFor="let group of notificationGroups">
+  @for (group of notificationGroups; track group) {
     <div class="notification-group mb-4">
       <h3 class="group-title">{{ group.title }}</h3>
-
       <!-- Items de cada grupo -->
-      <ng-container *ngFor="let item of group.items">
+      @for (item of group.items; track item) {
         <div class="notification-item flex align-items-center mb-3 p-2 rounded-lg shadow-sm">
           <div class="notification-icon flex align-items-center justify-content-center mr-3" [style.background-color]="item.iconBg">
             <i [class]="item.icon" [style.color]="item.iconColor"></i>
           </div>
           <div class="notification-content text-sm" [innerHTML]="formatFn(item)"></div>
         </div>
-      </ng-container>
+      }
     </div>
-  </ng-container>
+  }
 </div>

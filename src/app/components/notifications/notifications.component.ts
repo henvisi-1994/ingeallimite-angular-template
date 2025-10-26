@@ -3,11 +3,11 @@ import { Notification, NotificationGroup } from '../../pages/dashboard/domain/no
 import { MenuItem } from 'primeng/api';
 import { MenuModule } from 'primeng/menu';
 import { ButtonModule } from 'primeng/button';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'app-notifications',
-    imports: [CommonModule, MenuModule, ButtonModule],
+    imports: [MenuModule, ButtonModule],
     templateUrl: './notifications.component.html',
     styleUrls: ['./notifications.component.scss']
 })

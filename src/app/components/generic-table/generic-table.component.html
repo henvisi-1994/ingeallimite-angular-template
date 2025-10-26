@@ -8,7 +8,7 @@
   (onRowSelect)="onRowSelect($event)"
   [dataKey]="dataKey"
   [tableStyle]="{ 'min-width': '40rem' }"
->
+  >
   <!-- 🔍 Buscador -->
   <ng-template pTemplate="caption">
     <p-iconfield iconPosition="left">
@@ -18,26 +18,30 @@
         type="text"
         (input)="onGlobalFilter($event)"
         placeholder="Global Search"
-      />
+        />
     </p-iconfield>
   </ng-template>
 
   <!-- 🧱 Encabezado -->
   <ng-template pTemplate="header">
     <tr>
-      <th *ngFor="let col of columns" pSortableColumn="{{ col.field }}">
-        {{ col.header }}
-        <p-sortIcon [field]="col.field" />
-      </th>
+      @for (col of columns; track col) {
+        <th pSortableColumn="{{ col.field }}">
+          {{ col.header }}
+          <p-sortIcon [field]="col.field" />
+        </th>
+      }
     </tr>
   </ng-template>
 
   <!-- 📦 Cuerpo -->
   <ng-template pTemplate="body" let-rowData>
     <tr [pSelectableRow]="rowData">
-      <td *ngFor="let col of columns">
-        {{ getNestedValue(rowData, col.field) }}
-      </td>
+      @for (col of columns; track col) {
+        <td>
+          {{ getNestedValue(rowData, col.field) }}
+        </td>
+      }
     </tr>
   </ng-template>
 

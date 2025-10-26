@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MenuItem } from 'primeng/api';
@@ -7,7 +7,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 
 @Component({
     selector: 'dock-menu',
-    imports: [DockModule, RadioButtonModule, CommonModule, FormsModule],
+    imports: [DockModule, RadioButtonModule, FormsModule],
     templateUrl: './dock-menu.component.html',
     styleUrl: './dock-menu.component.scss'
 })
