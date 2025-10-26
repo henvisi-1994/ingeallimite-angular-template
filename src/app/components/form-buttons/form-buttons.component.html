@@ -1,0 +1,11 @@
+<div class="submit-container">
+  <button pButton type="button" severity="info" (click)="onSubmit()">
+    <i class="pi pi-save" pButtonIcon></i>
+    <span pButtonLabel>{{ submitLabel }}</span>
+  </button>
+
+  <button pButton type="button" severity="danger" (click)="onCancel()">
+    <i class="pi pi-times" pButtonIcon></i>
+    <span pButtonLabel>{{ cancelLabel }}</span>
+  </button>
+</div>

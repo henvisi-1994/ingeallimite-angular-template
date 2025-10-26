@@ -11,7 +11,7 @@ export class BaseService<T, ID = number> {
    * endpoint: e.g. '/users' (sin baseUrl).
    * baseUrl por defecto usa '' — puedes inyectar environment.apiUrl al extender.
    */
-  protected baseUrl = '';
+  protected baseUrl = 'https://api.miapp.com';
   protected endpoint = '';
 
   constructor(protected http: HttpClient) {}

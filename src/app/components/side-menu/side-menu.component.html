@@ -92,39 +92,6 @@
           </span>
         </div>
       </ng-template>
-
-      <ng-template #submenuheader let-item>
-        <span
-          class="text-primary font-bold text-sm uppercase tracking-wide px-3 py-2"
-          >{{ item.label }}</span
-        >
-      </ng-template>
-
-      <ng-template #item let-item>
-        @if (item.visible) {
-        <a
-          pRipple
-          class="flex items-center p-menu-item-link px-3 py-2 mx-2 rounded-lg hover:bg-surface-100 dark:hover:bg-surface-700 transition-colors duration-200"
-        >
-          <span
-            [class]="item.icon"
-            class="text-surface-600 dark:text-surface-300"
-          ></span>
-          <span class="ml-3 text-surface-700 dark:text-surface-200">{{
-            item.label
-          }}</span>
-          @if(item.badge){
-          <p-badge class="ml-auto" [value]="item.badge" />
-          } @if(item.shortcut){
-          <span
-            class="ml-auto border border-surface-300 dark:border-surface-600 rounded bg-surface-100 dark:bg-surface-700 text-surface-600 dark:text-surface-300 text-xs p-1"
-            >{{ item.shortcut }}</span
-          >
-          }
-        </a>
-        }
-      </ng-template>
-
       <ng-template #end>
         <button
           pRipple
