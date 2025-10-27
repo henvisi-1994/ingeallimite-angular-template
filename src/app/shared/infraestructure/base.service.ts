@@ -7,6 +7,7 @@ import { PageResult } from '../domain/pageResult';
   providedIn: 'root',
 })
 export class BaseService<T, ID = number> {
+  [x: string]: any;
   /**
    * endpoint: e.g. '/users' (sin baseUrl).
    * baseUrl por defecto usa '' — puedes inyectar environment.apiUrl al extender.

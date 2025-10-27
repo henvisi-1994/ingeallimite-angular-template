@@ -1,0 +1,44 @@
+<div class="card">
+  <p-tabs [(value)]="activeIndex">
+    <p-tablist>
+      <p-tab value="0">Formulario</p-tab>
+      <p-tab value="1">Datos</p-tab>
+    </p-tablist>
+
+    <p-tabpanels>
+      <!-- === FORMULARIO === -->
+      <p-tabpanel value="0">
+        <form #form="ngForm" class="form-container">
+          <!-- Proyecta siempre el template si existe -->
+          <ng-container
+            [ngTemplateOutlet]="formFieldsTpl"
+            [ngTemplateOutletContext]="{
+              model: model,
+              form: form,
+              disabled: disabled
+            }"
+          ></ng-container>
+          <!-- Botones -->
+         <app-form-buttons
+            [service]="service"
+            [model]="model"
+            (cancel)="onCancelForm()"
+          ></app-form-buttons>
+        </form>
+      </p-tabpanel>
+
+      <!-- === TABLA === -->
+      <p-tabpanel value="1">
+        <app-generic-table
+          [data]="data"
+          [columns]="columns"
+          [acciones]="true"
+          (edit)="onEdit($event, form)"
+          (view)="onView($event)"
+          (delete)="onDelete($event)"
+          [globalFilterFields]="filters"
+        ></app-generic-table>
+      </p-tabpanel>
+    </p-tabpanels>
+  </p-tabs>
+</div>

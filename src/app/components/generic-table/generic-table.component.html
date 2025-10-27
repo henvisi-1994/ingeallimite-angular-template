@@ -8,7 +8,7 @@
   (onRowSelect)="onRowSelect($event)"
   [dataKey]="dataKey"
   [tableStyle]="{ 'min-width': '40rem' }"
-  >
+>
   <!-- 🔍 Buscador -->
   <ng-template pTemplate="caption">
     <p-iconfield iconPosition="left">
@@ -18,7 +18,7 @@
         type="text"
         (input)="onGlobalFilter($event)"
         placeholder="Global Search"
-        />
+      />
     </p-iconfield>
   </ng-template>
 
@@ -26,11 +26,12 @@
   <ng-template pTemplate="header">
     <tr>
       @for (col of columns; track col) {
-        <th pSortableColumn="{{ col.field }}">
-          {{ col.header }}
-          <p-sortIcon [field]="col.field" />
-        </th>
+      <th pSortableColumn="{{ col.field }}">
+        {{ col.header }}
+        <p-sortIcon [field]="col.field" />
+      </th>
       }
+      <th>Acciones</th>
     </tr>
   </ng-template>
 
@@ -38,9 +39,39 @@
   <ng-template pTemplate="body" let-rowData>
     <tr [pSelectableRow]="rowData">
       @for (col of columns; track col) {
-        <td>
-          {{ getNestedValue(rowData, col.field) }}
-        </td>
+      <td>
+        {{ getNestedValue(rowData, col.field) }}
+      </td>
+      }
+      <!-- Botones de acción -->
+      @if (acciones) {
+      <td>
+        <button
+          pButton
+          type="button"
+          icon="pi pi-pencil"
+          class="p-button-rounded p-button-text p-button-info"
+          (click)="onEdit(rowData)"
+          pTooltip="Editar"
+        ></button>
+
+        <button
+          pButton
+          type="button"
+          icon="pi pi-eye"
+          class="p-button-rounded p-button-text p-button-primary"
+          (click)="onView(rowData)"
+          pTooltip="Visualizar"
+        ></button>
+        <button
+          pButton
+          type="button"
+          icon="pi pi-trash"
+          class="p-button-rounded p-button-text p-button-danger"
+          (click)="onDelete(rowData)"
+          pTooltip="Eliminar"
+        ></button>
+      </td>
       }
     </tr>
   </ng-template>

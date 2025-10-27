@@ -1,118 +1,79 @@
-<div class="card">
-  <p-tabs value="0">
-    <p-tablist>
-      <p-tab value="0">Formulario</p-tab>
-      <p-tab value="1">Data</p-tab>
-    </p-tablist>
+<app-generic-form
+  [model]="document"
+  [service]="documentService"
+  [columns]="columns"
+  [filters]="filters"
+  [disabled]="disabled"
+>
+  <ng-template
+    #formFields
+    let-model="model"
+    let-form="form"
+    let-disabled="disabled"
+  >
+    <div class="flex justify-center items-end gap-4">
+      <!-- === NOMBRE === -->
+      <p-floatlabel variant="in" class="field">
+        <input
+          pInputText
+          type="text"
+          name="nombre"
+          placeholder="Obligatorio"
+          [(ngModel)]="model.nombre"
+          #nombre="ngModel"
+          required
+          [disabled]="disabled"
+        />
+        <label for="on_label">Nombre</label>
 
-    <p-tabpanels>
-      <!-- === FORMULARIO === -->
-      <p-tabpanel value="0">
-        <form #documentForm="ngForm" class="form-container">
-          <div class="form-grid">
-            <!-- === USERNAME === -->
-            <div class="field">
-              <input
-                pInputText
-                type="text"
-                id="nombre"
-                name="nombre"
-                placeholder="Nombre"
-                [(ngModel)]="document.nombre"
-                #nombre="ngModel"
-                required
-                [invalid]="
-                  nombre.invalid && (nombre.touched || documentForm.submitted)
-                "
-              />
+        @if (nombre.invalid && (nombre.touched || form.submitted)) {
+        <p-message severity="error" size="small" variant="simple">
+          Nombre es requerido.
+        </p-message>
+        }
+      </p-floatlabel>
 
-              @if (nombre.invalid && (nombre.touched || documentForm.submitted))
-              { @if (nombre.hasError('required')) {
-              <p-message
-                class="error-message"
-                severity="error"
-                size="small"
-                variant="simple"
-              >
-                Username is required.
-              </p-message>
-              } }
-            </div>
-            <div class="field">
-              <input
-                pInputText
-                type="text"
-                id="titulo"
-                name="titulo"
-                placeholder="Titulo"
-                [(ngModel)]="document.titulo"
-                #titulo="ngModel"
-                required
-                [invalid]="
-                  titulo.invalid && (titulo.touched || documentForm.submitted)
-                "
-              />
+      <!-- === TITULO === -->
+      <p-floatlabel variant="in" class="field">
+        <input
+          pInputText
+          type="text"
+          name="titulo"
+          placeholder="Obligatorio"
+          [(ngModel)]="model.titulo"
+          #titulo="ngModel"
+          required
+          [disabled]="disabled"
+        />
+        <label for="on_label">Titulo</label>
 
-              @if (titulo.invalid && (titulo.touched || documentForm.submitted))
-              { @if (titulo.hasError('required')) {
-              <p-message
-                class="error-message"
-                severity="error"
-                size="small"
-                variant="simple"
-              >
-                Titulo is required.
-              </p-message>
-              } }
-            </div>
-            <div class="field">
-              <input
-                pInputText
-                type="text"
-                id="descripcion"
-                name="descripcion"
-                placeholder="Descripcion"
-                [(ngModel)]="document.descripcion"
-                #descripcion="ngModel"
-                required
-                [invalid]="
-                  descripcion.invalid &&
-                  (descripcion.touched || documentForm.submitted)
-                "
-              />
+        @if (titulo.invalid && (titulo.touched || form.submitted)) {
+        <p-message severity="error" size="small" variant="simple">
+          Título es requerido.
+        </p-message>
+        }
+      </p-floatlabel>
 
-              @if (descripcion.invalid && (descripcion.touched ||
-              documentForm.submitted)) { @if (descripcion.hasError('required'))
-              {
-              <p-message
-                class="error-message"
-                severity="error"
-                size="small"
-                variant="simple"
-              >
-                Descripcion is required.
-              </p-message>
-              } }
-            </div>
-          </div>
+      <!-- === DESCRIPCIÓN === -->
+      <p-floatlabel variant="in" class="field">
+        <input
+          pInputText
+          type="text"
+          name="descripcion"
+          placeholder="Obligatorio"
+          [(ngModel)]="model.descripcion"
+          #descripcion="ngModel"
+          required
+          [disabled]="disabled"
+        />
+        <label for="on_label">Descripcion</label>
 
-          <!-- === BOTÓN DE ENVÍO === -->
-          <app-form-buttons
-            [form]="documentForm"
-            [service]="documentService"
-          ></app-form-buttons>
-        </form>
-      </p-tabpanel>
-
-      <!-- === TABLA === -->
-      <p-tabpanel value="1">
-        <app-generic-table
-          [data]="documents"
-          [columns]="columns"
-          [globalFilterFields]="filters"
-          (selectionChange)="selectedDocument = $event"
-        ></app-generic-table>
-      </p-tabpanel>
-    </p-tabpanels>
-  </p-tabs>
-</div>
+        @if (descripcion.invalid && (descripcion.touched || form.submitted)) {
+        <p-message severity="error" size="small" variant="simple">
+          Descripción es requerida.
+        </p-message>
+        }
+      </p-floatlabel>
+    </div>
+  </ng-template>
+</app-generic-form>

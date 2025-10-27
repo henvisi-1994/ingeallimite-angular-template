@@ -1,5 +1,10 @@
-
-import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { Table, TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { TagModule } from 'primeng/tag';
@@ -8,17 +13,17 @@ import { InputIconModule } from 'primeng/inputicon';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
-    selector: 'app-generic-table',
-    imports: [
+  selector: 'app-generic-table',
+  imports: [
     TableModule,
     InputTextModule,
     TagModule,
     IconFieldModule,
     InputIconModule,
-    ButtonModule
-],
-    templateUrl: './generic-table.component.html',
-    styleUrls: ['./generic-table.component.scss']
+    ButtonModule,
+  ],
+  templateUrl: './generic-table.component.html',
+  styleUrls: ['./generic-table.component.scss'],
 })
 export class GenericTableComponent {
   @Input() data: any[] = [];
@@ -28,6 +33,10 @@ export class GenericTableComponent {
   @Input() paginator = true;
   @Input() selectionMode: 'single' | 'multiple' | null = 'single';
   @Input() dataKey = 'id';
+  @Input() acciones = false;
+  @Output() edit = new EventEmitter<any>();
+  @Output() view = new EventEmitter<any>();
+  @Output() delete = new EventEmitter<any>();
 
   @Output() selectionChange = new EventEmitter<any>();
 
@@ -38,13 +47,15 @@ export class GenericTableComponent {
   get effectiveGlobalFilterFields(): string[] {
     return this.globalFilterFields && this.globalFilterFields.length
       ? this.globalFilterFields
-      : this.columns.map(c => c.field);
+      : this.columns.map((c) => c.field);
   }
 
   // ✅ Accede a valores anidados (e.g. 'country.name')
   getNestedValue(obj: any, path: string): any {
     if (!obj || !path) return null;
-    return path.split('.').reduce((value, key) => (value ? value[key] : undefined), obj);
+    return path
+      .split('.')
+      .reduce((value, key) => (value ? value[key] : undefined), obj);
   }
 
   onGlobalFilter(event: Event) {
@@ -52,8 +63,8 @@ export class GenericTableComponent {
     const value = input.value?.toLowerCase() ?? '';
 
     // Filtro global personalizado con soporte para campos anidados
-    this.dt.filteredValue = this.data.filter(item =>
-      this.effectiveGlobalFilterFields.some(field => {
+    this.dt.filteredValue = this.data.filter((item) =>
+      this.effectiveGlobalFilterFields.some((field) => {
         const cellValue = this.getNestedValue(item, field);
         return cellValue?.toString().toLowerCase().includes(value);
       })
@@ -62,5 +73,17 @@ export class GenericTableComponent {
 
   onRowSelect(event: any) {
     this.selectionChange.emit(event.data);
+  }
+  // Métodos para emitir eventos
+  onEdit(item: any) {
+    this.edit.emit(item);
+  }
+
+  onView(item: any) {
+    this.view.emit(item);
+  }
+
+  onDelete(item: any) {
+    this.delete.emit(item);
   }
 }

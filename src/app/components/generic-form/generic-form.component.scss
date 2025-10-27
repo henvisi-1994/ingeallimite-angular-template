@@ -1,0 +1,42 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.error-message {
+  margin-top: 0.25rem;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3px, 1fr));
+  gap: 1.5rem;
+}
+
+
+.error-message {
+  display: block !important;
+  margin-top: 0.25rem;
+  width: 100%;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: flex-end; /* o center si lo quieres centrado */
+  margin-top: 1rem;
+
+}
+

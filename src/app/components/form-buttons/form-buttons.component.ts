@@ -13,69 +13,52 @@ import { BaseService } from '../../shared/infraestructure/base.service';
   styleUrl: './form-buttons.component.scss',
   providers: [MessageService],
 })
-export class FormButtonsComponent<T extends { id?: number }, S extends BaseService<T>> {
-  /** Formulario a controlar */
-  @Input() form!: NgForm;
-
-  /** Servicio que implemente create y update */
+export class FormButtonsComponent<
+  T extends { id?: number },
+  S extends BaseService<T>
+> {
   @Input() service!: S;
+  @Input() model!: T |any; // ← NUEVO: recibe el modelo
 
-  /** Labels de los botones */
   @Input() submitLabel: string = 'Guardar';
   @Input() cancelLabel: string = 'Cancelar';
 
+  /** Nuevo: evento para avisar al padre */
+  @Output() cancel = new EventEmitter<void>();
+
   private messageService = inject(MessageService);
 
-  /** Enviar formulario */
   onSubmit() {
-    if (!this.form || !this.service) {
-      console.error('Form o service no definidos');
-      return;
-    }
-
-    if (!this.form.valid) {
-      this.messageService.add({
-        severity: 'warn',
-        summary: 'Warning',
-        detail: 'Form is invalid',
-        life: 3000,
-      });
-      return;
-    }
-
-    const data: T = this.form.value;
-
-    // Determinar si es update o create
-    const action$ = data.id
-      ? this.service.update(data.id,data)
-      : this.service.create(data);
+    if (!this.service || !this.model) return;
+    // Usa el modelo directamente en lugar de form.value
+    const action$ = this.model.id
+      ? this.service.update(this.model.id, this.model)
+      : this.service.create(this.model);
 
     action$.subscribe({
-      next: () => {
+      next: (result: T) => {
         this.messageService.add({
           severity: 'success',
-          summary: 'Success',
-          detail: `Form ${data.id ? 'updated' : 'created'} successfully`,
+          summary: 'Éxito',
+          detail: `Registro ${
+            this.model.id ? 'actualizado' : 'creado'
+          } correctamente`,
           life: 3000,
         });
-        this.form.resetForm();
       },
       error: (err: any) => {
         console.error(err);
         this.messageService.add({
           severity: 'error',
           summary: 'Error',
-          detail: 'Failed to submit form',
+          detail: 'Error al guardar el registro',
           life: 3000,
         });
       },
     });
   }
 
-  /** Cancelar formulario */
   onCancel() {
-    if (this.form) {
-      this.form.resetForm();
-    }
+    this.cancel.emit(); // 🔥 Notifica al padre
   }
 }
