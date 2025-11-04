@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
-import { BaseService } from '../../../shared/infraestructure/base.service';
 import { Document } from '../domain/Document';
 import { HttpClient } from '@angular/common/http';
+import { BaseRepository } from '../../../shared/infraestructure/base.repository';
 
 @Injectable({
   providedIn: 'root',
 })
-export class DocumentService extends BaseService<Document,number> {
+export class DocumentService extends BaseRepository<Document> {
+  protected override endpoint: string ='products';
+
  constructor(protected override http: HttpClient) {
-    super(http); // inyectamos HttpClient y lo pasamos a BaseService
-    this.endpoint = '/documents';
+    super(http);
   }
   getData(): Document[] {
     return [

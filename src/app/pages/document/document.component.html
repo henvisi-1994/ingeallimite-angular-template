@@ -1,9 +1,11 @@
 <app-generic-form
-  [model]="document"
   [service]="documentService"
   [columns]="columns"
   [filters]="filters"
   [disabled]="disabled"
+  [formGroup]="documentForm"
+  (formValueChange)="onFormValueChange($event)"
+  (formStatusChange)="onFormStatusChange($event)"
 >
   <ng-template
     #formFields
@@ -11,22 +13,21 @@
     let-form="form"
     let-disabled="disabled"
   >
-    <div class="flex justify-center items-end gap-4">
+    <div [formGroup]="documentForm" class="flex justify-center items-end gap-4">
       <!-- === NOMBRE === -->
       <p-floatlabel variant="in" class="field">
         <input
           pInputText
           type="text"
           name="nombre"
+          formControlName="nombre"
           placeholder="Obligatorio"
-          [(ngModel)]="model.nombre"
-          #nombre="ngModel"
-          required
-          [disabled]="disabled"
         />
         <label for="on_label">Nombre</label>
 
-        @if (nombre.invalid && (nombre.touched || form.submitted)) {
+        @if (documentForm.get('nombre')?.invalid &&
+        (documentForm.get('nombre')?.touched ||
+        documentForm.get('nombre')?.dirty)) {
         <p-message severity="error" size="small" variant="simple">
           Nombre es requerido.
         </p-message>
@@ -39,15 +40,13 @@
           pInputText
           type="text"
           name="titulo"
+          formControlName="titulo"
           placeholder="Obligatorio"
-          [(ngModel)]="model.titulo"
-          #titulo="ngModel"
-          required
-          [disabled]="disabled"
         />
         <label for="on_label">Titulo</label>
-
-        @if (titulo.invalid && (titulo.touched || form.submitted)) {
+        @if (documentForm.get('titulo')?.invalid &&
+        (documentForm.get('titulo')?.touched ||
+        documentForm.get('titulo')?.dirty)) {
         <p-message severity="error" size="small" variant="simple">
           Título es requerido.
         </p-message>
@@ -61,14 +60,12 @@
           type="text"
           name="descripcion"
           placeholder="Obligatorio"
-          [(ngModel)]="model.descripcion"
-          #descripcion="ngModel"
-          required
-          [disabled]="disabled"
+          formControlName="descripcion"
         />
         <label for="on_label">Descripcion</label>
-
-        @if (descripcion.invalid && (descripcion.touched || form.submitted)) {
+        @if (documentForm.get('descripcion')?.invalid &&
+        (documentForm.get('descripcion')?.touched ||
+        documentForm.get('descripcion')?.dirty)) {
         <p-message severity="error" size="small" variant="simple">
           Descripción es requerida.
         </p-message>

@@ -8,23 +8,35 @@
     <p-tabpanels>
       <!-- === FORMULARIO === -->
       <p-tabpanel value="0">
-        <form #form="ngForm" class="form-container">
-          <!-- Proyecta siempre el template si existe -->
+        <!-- Formulario Reactivo -->
+        <form *ngIf="formGroup" [formGroup]="formGroup" class="form-container">
           <ng-container
             [ngTemplateOutlet]="formFieldsTpl"
             [ngTemplateOutletContext]="{
-              model: model,
+              form: formGroup,
+              disabled: disabled
+            }"
+          ></ng-container>
+        </form>
+
+        <!-- Formulario Template-Driven (para backwards compatibility) -->
+        <form *ngIf="!formGroup" #form="ngForm" class="form-container" (ngModelChange)="onModelChange()">
+          <ng-container
+            [ngTemplateOutlet]="formFieldsTpl"
+            [ngTemplateOutletContext]="{
               form: form,
               disabled: disabled
             }"
           ></ng-container>
-          <!-- Botones -->
-         <app-form-buttons
-            [service]="service"
-            [model]="model"
-            (cancel)="onCancelForm()"
-          ></app-form-buttons>
         </form>
+
+        <!-- Botones -->
+        <app-form-buttons
+          [service]="service"
+          [id]="id"
+          [form]="formGroup"
+          (cancel)="onCancelForm()"
+        ></app-form-buttons>
       </p-tabpanel>
 
       <!-- === TABLA === -->

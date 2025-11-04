@@ -1,5 +1,5 @@
 <div class="submit-container">
-  <button pButton type="button" severity="info" (click)="onSubmit()">
+  <button pButton type="button" severity="info" (click)="onSubmit()" [disabled]="loading">
     <i class="pi pi-save" pButtonIcon></i>
     <span pButtonLabel>{{ submitLabel }}</span>
   </button>
