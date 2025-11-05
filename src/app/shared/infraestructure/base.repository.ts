@@ -3,7 +3,7 @@ import { firstValueFrom } from 'rxjs';
 import { Repository } from '../domain/repository.interface';
 
 export abstract class BaseRepository<T, ID = number | string> implements Repository<T, ID> {
-  private  baseUrl: string ='http://api.com';
+  private  baseUrl: string ='http://localhost:3000/api';
   protected abstract endpoint: string;
 
   constructor(protected http: HttpClient) {}

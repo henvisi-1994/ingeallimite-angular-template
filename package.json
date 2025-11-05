@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+  "start-docker": "ng serve --host 0.0.0.0 --port 4200 --poll 1000",
+  "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,

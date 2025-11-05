@@ -7,7 +7,6 @@ import {
   FormBuilder,
   FormGroup,
   FormsModule,
-  NgForm,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
@@ -51,69 +50,11 @@ export class DocumentComponent {
       titulo: ['', Validators.required],
       descripcion: ['', Validators.required],
     });
-
-    // Escuchar cambios del formulario
-    this.documentForm.valueChanges.subscribe((values) => {
-      console.log('🔄 Formulario cambió:', values);
-      console.log('✅ Válido:', this.documentForm.valid);
-      console.log('❌ Errores:', this.documentForm.errors);
-    });
-
-    this.documentForm.statusChanges.subscribe((status) => {
-      console.log('🎯 Estado:', status);
-    });
   }
 
-  shouldShowError(fieldName: string): boolean {
-    const control = this.documentForm.get(fieldName);
-    if (!control) return false;
-    return control.invalid && (control.touched || control.dirty);
-  }
 
-  submitForm() {
-    console.log('🚀 Intentando enviar formulario...');
-    this.markAllFieldsAsTouched();
 
-    if (this.documentForm.valid) {
-      console.log('✅ Formulario válido - Enviando datos...');
-      // Tu lógica aquí
-    } else {
-      console.log('❌ Formulario inválido');
-      this.logFieldErrors();
-    }
-  }
 
-  private markAllFieldsAsTouched() {
-    Object.keys(this.documentForm.controls).forEach((key) => {
-      this.documentForm.get(key)?.markAsTouched();
-    });
-  }
 
-  private logFieldErrors() {
-    Object.keys(this.documentForm.controls).forEach((key) => {
-      const control = this.documentForm.get(key);
-      if (control?.errors) {
-        console.log(`❌ Error en ${key}:`, control.errors);
-      }
-    });
-  }
 
-  resetForm() {
-    this.documentForm.reset();
-  }
-
-  loadData(data: Document) {
-    this.documentForm.patchValue({
-      nombre: data.nombre,
-      titulo: data.titulo,
-      descripcion: data.descripcion,
-    });
-  }
-  onFormValueChange(values: any) {
-    console.log('📨 Valores recibidos del generic-form:', values);
-  }
-
-  onFormStatusChange(status: any) {
-    console.log('📨 Estado recibido del generic-form:', status);
-  }
 }

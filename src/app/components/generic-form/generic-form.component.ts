@@ -53,9 +53,7 @@ export class GenericFormComponent<
   formFieldsTpl!: TemplateRef<any>;
   @ViewChild('form', { static: false }) form!: NgForm;
 
-  /** Salidas para Reactive Forms */
-  @Output() formValueChange = new EventEmitter<any>();
-  @Output() formStatusChange = new EventEmitter<any>();
+
 
   /** Otros */
   activeIndex = '0';
@@ -66,17 +64,6 @@ export class GenericFormComponent<
   async ngOnInit() {
     if (this.service && typeof this.service.findAll === 'function') {
       this.data = await this.service.findAll();
-    }
-
-    // Si tenemos un FormGroup reactivo, escuchar sus cambios
-    if (this.formGroup) {
-      this.formGroup.valueChanges.subscribe((values) => {
-        this.formValueChange.emit(values);
-      });
-
-      this.formGroup.statusChanges.subscribe((status) => {
-        this.formStatusChange.emit(status);
-      });
     }
   }
 
@@ -118,9 +105,10 @@ export class GenericFormComponent<
 
   // Resto de tus métodos...
   onCancelForm() {
-    this.disabled = false;
     if (this.formGroup) {
+      this.formGroup.enable();
       this.formGroup.reset();
+      this.disabled = false;
     }
   }
 
@@ -146,7 +134,8 @@ export class GenericFormComponent<
   }
 
   onDelete(item: T) {
-    this.service.delete;
+    const id_item = item.id??0
+   this.service.delete(id_item);
     this.data = this.data.filter((d) => d.id !== item.id);
   }
 }
