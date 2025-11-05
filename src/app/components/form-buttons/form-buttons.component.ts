@@ -27,6 +27,8 @@ export class FormButtonsComponent<
 
   /** Nuevo: evento para avisar al padre */
   @Output() cancel = new EventEmitter<void>();
+  @Output() afterSave = new EventEmitter<void>();
+
 
   private messageService = inject(MessageService);
   loading: boolean = false;
@@ -56,6 +58,7 @@ export class FormButtonsComponent<
       } else {
         result = await this.service.create(payload);
       }
+    this.afterSave.emit();
 
       this.messageService.add({
         severity: 'success',
@@ -123,4 +126,5 @@ export class FormButtonsComponent<
   onCancel() {
     this.cancel.emit(); // 🔥 Notifica al padre
   }
+
 }

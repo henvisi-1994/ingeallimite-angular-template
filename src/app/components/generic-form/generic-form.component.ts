@@ -53,8 +53,6 @@ export class GenericFormComponent<
   formFieldsTpl!: TemplateRef<any>;
   @ViewChild('form', { static: false }) form!: NgForm;
 
-
-
   /** Otros */
   activeIndex = '0';
   data: T[] = [];
@@ -98,7 +96,10 @@ export class GenericFormComponent<
       }
     });
   }
-
+  async onAfterSave() {
+    console.log('before save');
+    this.data = await this.service.findAll();
+  }
   onModelChange() {
     this.emitErrors();
   }
@@ -134,8 +135,8 @@ export class GenericFormComponent<
   }
 
   onDelete(item: T) {
-    const id_item = item.id??0
-   this.service.delete(id_item);
+    const id_item = item.id ?? 0;
+    this.service.delete(id_item);
     this.data = this.data.filter((d) => d.id !== item.id);
   }
 }
