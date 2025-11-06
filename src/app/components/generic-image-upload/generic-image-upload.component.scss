@@ -1,0 +1,131 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+:host ::ng-deep .p-fileupload-file-badge,
+:host ::ng-deep .p-badge {
+  display: none !important;
+}
+
+:host ::ng-deep .p-fileupload-file-name,
+:host ::ng-deep .p-badge {
+  display: none !important;
+}
+
+:host ::ng-deep .p-fileupload-file-size,
+:host ::ng-deep .p-badge {
+  display: none !important;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.image-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+}
+
+.image-preview {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: 2px dashed #3498db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.image-preview:hover {
+  border-color: #2980b9;
+  transform: scale(1.02);
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.placeholder-text {
+  color: #7f8c8d;
+  text-align: center;
+  font-size: 14px;
+  padding: 0 15px;
+}
+
+.file-upload {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Personalización del p-fileupload */
+:deep(.p-fileupload) {
+  border: 2px dashed #bdc3c7;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+:deep(.p-fileupload:hover) {
+  border-color: #3498db;
+  background-color: #e8f4fc;
+}
+
+:deep(.p-fileupload .p-fileupload-content) {
+  padding: 25px;
+  text-align: center;
+  background: transparent !important;
+  border: none !important;
+}
+
+:deep(.p-fileupload .p-button) {
+  background: #3498db;
+  border: 1px solid #3498db;
+}
+
+:deep(.p-fileupload .p-button:hover) {
+  background: #2980b9;
+  border-color: #2980b9;
+}
+
+.instructions {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #e8f4fc;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.instructions h3 {
+  margin-bottom: 10px;
+  color: #3498db;
+}
+
+.instructions ul {
+  padding-left: 20px;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .image-preview {
+    width: 180px;
+    height: 180px;
+  }
+}

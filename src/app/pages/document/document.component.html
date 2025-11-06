@@ -69,6 +69,20 @@
         </p-message>
         }
       </p-floatlabel>
+
+      <p-floatlabel variant="in" class="field">
+        <app-generic-image-upload
+          [formGroup]="documentForm"
+          controlName="imagen"
+        ></app-generic-image-upload>
+        @if (documentForm.get('imagen')?.invalid &&
+        (documentForm.get('imagen')?.touched ||
+        documentForm.get('imagen')?.dirty)) {
+        <p-message severity="error" size="small" variant="simple">
+          La Imagen es requerido.
+        </p-message>
+        }
+      </p-floatlabel>
     </div>
   </ng-template>
 </app-generic-form>

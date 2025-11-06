@@ -1,0 +1,52 @@
+  <div class="image-upload-container">
+    <!-- Selector de archivos con p-fileupload -->
+    <div class="file-upload">
+      <p-fileupload
+        mode="advanced"
+        name="file"
+        [multiple]="false"
+        accept="image/*"
+        [maxFileSize]="1000000"
+        [showUploadButton]="false"
+        [showCancelButton]="false"
+        chooseLabel="Seleccionar Imagen"
+        (onSelect)="onFileSelect($event)"
+      >
+        <ng-template pTemplate="content">
+          @if (formGroup.get('imagen')?.value) {
+          <div class="image-preview" id="imagePreview">
+            <div class="placeholder-text">
+              <img
+                *ngIf="formGroup.get('imagen')?.value"
+                [src]="formGroup.get('imagen')?.value"
+                alt="Vista previa"
+                class="w-28 h-28 object-cover rounded-lg shadow-md border border-gray-300 mb-2"
+              />
+            </div>
+          </div>
+          } @else {
+          <div class="upload-content">
+            <i
+              class="pi pi-cloud-upload"
+              style="font-size: 48px; color: #3498db; margin-bottom: 15px"
+            ></i>
+            <div
+              style="
+                color: #2c3e50;
+                font-size: 16px;
+                margin-bottom: 10px;
+                font-weight: 500;
+              "
+            >
+              Arrastra una imagen o haz clic para seleccionarla
+            </div>
+            <div style="color: #7f8c8d; font-size: 14px">
+              Formatos: JPG, PNG, GIF (Máx. 1MB)
+            </div>
+          </div>
+          }
+        </ng-template>
+      </p-fileupload>
+    </div>
+    <!-- Vista previa de la imagen -->
+  </div>

@@ -14,6 +14,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { MessageModule } from 'primeng/message';
 import { GenericFormComponent } from '../../components/generic-form/generic-form.component';
 import { FloatLabel } from 'primeng/floatlabel';
+import { FileUploadModule } from 'primeng/fileupload';
+import { GenericImageUploadComponent } from '../../components/generic-image-upload/generic-image-upload.component';
 
 @Component({
   selector: 'app-document',
@@ -25,6 +27,8 @@ import { FloatLabel } from 'primeng/floatlabel';
     MessageModule,
     InputTextModule,
     FloatLabel,
+    FileUploadModule,
+    GenericImageUploadComponent
   ],
   templateUrl: './document.component.html',
   styleUrl: './document.component.scss',
@@ -49,9 +53,9 @@ export class DocumentComponent {
       nombre: ['', Validators.required],
       titulo: ['', Validators.required],
       descripcion: ['', Validators.required],
+      imagen: ['', Validators.required],
     });
   }
-
 
 
 
