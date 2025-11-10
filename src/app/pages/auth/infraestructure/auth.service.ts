@@ -5,6 +5,7 @@ import { RegisterResponse } from '../domain/registerResponse';
 import { LoginResponse } from '../domain/loginResponse';
 import { User } from '../domain/user';
 import { Router } from '@angular/router';
+import { AuthStore } from '../../../store/auth';
 
 @Injectable({
   providedIn: 'root',
@@ -14,6 +15,8 @@ export class AuthService {
   private readonly apiUrl = 'http://localhost:3000/api/auth';
   private router = inject(Router);
   private ngZone = inject(NgZone);
+    private auth = inject(AuthStore);
+
   // ============ Registro ============
   register(data: {
     email: string;
@@ -29,7 +32,7 @@ export class AuthService {
       tap((res) => {
         // Guarda el token y usuario en localStorage
         localStorage.setItem('token', res.token);
-        localStorage.setItem('user', JSON.stringify(res.user));
+        this.auth.setUser(res.user)
       })
     );
   }
@@ -37,7 +40,7 @@ export class AuthService {
   // ============ Logout ============
   logout(): void {
     localStorage.removeItem('token');
-    localStorage.removeItem('user');
+     this.auth.logout()
     this.ngZone.run(async () => {
       this.router.navigate(['/auth/login'], { replaceUrl: true });
     });

@@ -10,6 +10,7 @@ import { DockMenuComponent } from '../dock-menu/dock-menu.component';
 import { MenuStore } from '../../store/menu';
 import { AuthService } from '../../pages/auth/infraestructure/auth.service';
 import { User } from '../../pages/auth/domain/user';
+import { AuthStore } from '../../store/auth';
 
 @Component({
   selector: 'side-menu-component',
@@ -21,7 +22,7 @@ import { User } from '../../pages/auth/domain/user';
     DockModule,
     ButtonModule,
     DockMenuComponent,
-    Ripple
+    Ripple,
   ],
   templateUrl: './side-menu.component.html',
   styleUrl: './side-menu.component.scss',
@@ -30,14 +31,18 @@ export class SideMenuComponent implements OnInit {
   items: MenuItem[] | [] = [];
   user!: User;
   menu = inject(MenuStore);
+  auth = inject(AuthStore);
   authService = inject(AuthService);
 
-  ngOnInit() {
+  async ngOnInit() {
     this.items = this.menu.links();
-    this.user = this.authService.getUser() ?? {
+    await this.auth.isUserLoggedIn();
+    this.user = this.auth.user() ?? {
       id: 0,
       email: '',
       name: '',
+      permissions: [],
+      roles: [],
     };
   }
 }
