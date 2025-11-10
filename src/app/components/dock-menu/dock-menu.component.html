@@ -1,10 +1,12 @@
+ @if(menu.visible()){
 <div class="simple-dock-container">
   <div class="simple-dock">
     @for (item of dockItems; track item) {
-      <div class="simple-dock-item">
+      <div class="simple-dock-item" (click)="redirigir(item)">
         <i [class]="item.icon" class="simple-dock-icon"></i>
         <span class="simple-dock-tooltip">{{ item.label }}</span>
       </div>
     }
   </div>
 </div>
+ }

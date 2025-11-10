@@ -1,19 +1,25 @@
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, NgZone } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 import { RegisterResponse } from '../domain/registerResponse';
 import { LoginResponse } from '../domain/loginResponse';
 import { User } from '../domain/user';
+import { Router } from '@angular/router';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-private http = inject(HttpClient);
+  private http = inject(HttpClient);
   private readonly apiUrl = 'http://localhost:3000/api/auth';
-
+  private router = inject(Router);
+  private ngZone = inject(NgZone);
   // ============ Registro ============
-  register(data: { email: string; password: string; name: string }): Observable<RegisterResponse> {
+  register(data: {
+    email: string;
+    password: string;
+    name: string;
+  }): Observable<RegisterResponse> {
     return this.http.post<RegisterResponse>(`${this.apiUrl}/register`, data);
   }
 
@@ -32,6 +38,9 @@ private http = inject(HttpClient);
   logout(): void {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
+    this.ngZone.run(async () => {
+      this.router.navigate(['/auth/login'], { replaceUrl: true });
+    });
   }
 
   // ============ Helpers ============

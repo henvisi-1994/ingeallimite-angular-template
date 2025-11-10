@@ -1,5 +1,6 @@
 <!-- side-menu.component.html -->
-<div class="h-screen flex">
+ @if(menu.visible()){
+  <div class="h-screen flex">
   <!-- Menú lateral para desktop -->
   <div
     class="hidden md:flex flex-col h-full bg-surface-0 dark:bg-surface-800 border-r border-surface-200 dark:border-surface-700"
@@ -93,7 +94,7 @@
         </div>
       </ng-template>
       <ng-template #end>
-        <button
+        <div
           pRipple
           class="relative overflow-hidden w-full border-0 bg-transparent flex items-start p-2 pl-4 hover:bg-surface-100 dark:hover:bg-surface-800 rounded-none cursor-pointer transition-colors duration-200"
         >
@@ -103,10 +104,10 @@
             shape="circle"
           />
           <span class="inline-flex flex-col">
-            <span class="font-bold">Amy Elsner</span>
-            <span class="text-sm">Admin</span>
+            <span class="font-bold">{{ user.name }}</span>
+            <span class="text-sm"></span>
           </span>
-        </button>
+        </div>
       </ng-template>
     </p-menu>
   </div>
@@ -120,3 +121,5 @@
     </div>
   </div>
 </div>
+ }
+

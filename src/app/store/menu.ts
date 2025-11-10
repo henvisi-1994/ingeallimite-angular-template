@@ -1,74 +1,49 @@
-import { Injectable, signal, effect } from '@angular/core';
+import { Injectable, inject, computed, NgZone, signal } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { Router } from '@angular/router';
+import { AuthService } from '../pages/auth/infraestructure/auth.service';
 
 @Injectable({ providedIn: 'root' })
 export class MenuStore {
-  // 🧩 Estado: signal reactivo del menú
-  links = signal<MenuItem[]>([
-    {
-      separator: true,
-    },
-    {
-      label: 'Home',
-      items: [
-        {
-          label: 'Dashboard',
+  private auth = inject(AuthService);
 
-          icon: 'pi pi-plus',
-          shortcut: '⌘+N',
-          routerLink: '/',
-          visible: true,
-        },
-      ],
-    },
-    {
-      label: 'Documentos',
-      items: [
-        {
-          label: 'Nuevo',
-          icon: 'pi pi-plus',
-          shortcut: '⌘+N',
-          routerLink: '/document',
-          visible: true,
-        },
-        {
-          label: 'Buscar',
-          icon: 'pi pi-search',
-          shortcut: '⌘+S',
-          visible: false,
-        },
-      ],
-    },
-    {
-      label: 'Perfil',
-      items: [
-        {
-          label: 'Configuracion',
-          icon: 'pi pi-cog',
-          shortcut: '⌘+O',
-          visible: true,
-        },
-        {
-          label: 'Mensajes',
-          icon: 'pi pi-inbox',
-          badge: '2',
-          visible: true,
-        },
-        {
-          label: 'Cerrar Sesion',
-          icon: 'pi pi-sign-out',
-          shortcut: '⌘+Q',
-          visible: true,
-        },
-      ],
-    },
-    {
-      separator: true,
-    },
-  ]);
 
-  constructor() {
-    effect(() => {
-    });
+  visible = signal<Boolean>(true);
+
+  links = computed<MenuItem[]>(() => {
+    if (!this.auth.isAuthenticated()) {
+      return [];
+    }
+
+    return [
+      { separator: true },
+      {
+        label: 'Home',
+        items: [
+          { label: 'Dashboard', icon: 'pi pi-home', routerLink: '/', visible: true },
+        ],
+      },
+      {
+        label: 'Documentos',
+        items: [
+          { label: 'Nuevo', icon: 'pi pi-plus', routerLink: '/document', visible: true },
+        ],
+      },
+      {
+        label: 'Perfil',
+        items: [
+          {
+            label: 'Cerrar Sesión',
+            icon: 'pi pi-sign-out',
+            visible: true,
+            command: () => this.logout(),
+          },
+        ],
+      },
+    ];
+  });
+
+  async logout() {
+    this.auth.logout();
   }
 }

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, NgZone } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -30,13 +30,14 @@ import { MessageService } from 'primeng/api';
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
-  providers: [AuthService,MessageService, Router],
+  providers: [MessageService],
 })
 export class LoginComponent {
   form: FormGroup;
   private readonly authService = inject(AuthService);
   private readonly router = inject(Router);
   private readonly messageService = inject(MessageService);
+  private readonly ngZone = inject(NgZone); // ✅ agrega esto
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
@@ -47,19 +48,25 @@ export class LoginComponent {
   }
 
  async onSubmit() {
-  if (this.form.invalid) return;
+    if (this.form.invalid) return;
 
-  try {
-  await lastValueFrom(this.authService.login(this.form.value));
-     this.router.navigate(['/']);
-  } catch (err: unknown) {
-     const error = err as HttpErrorResponse;
+    try {
+      const res = await lastValueFrom(this.authService.login(this.form.value));
+      console.log('✅ Login OK:', res);
+
+      // 🔥 Asegura que Angular detecte el cambio y redirija
+      this.ngZone.run(() => {
+        this.router.navigate(['/']); // o '/dashboard'
+      });
+
+    } catch (err: unknown) {
+      const error = err as HttpErrorResponse;
       const msg = error.error?.message || 'Error al iniciar sesión';
       this.messageService.add({
         severity: 'error',
         summary: 'Error',
         detail: msg,
       });
+    }
   }
-}
 }

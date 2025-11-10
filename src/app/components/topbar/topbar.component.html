@@ -1,0 +1,38 @@
+<p-menubar [model]="items">
+  <!-- Logo + título -->
+  <ng-template pTemplate="start">
+    <div class="flex items-center gap-2">
+      <p-button
+        icon="pi pi-bars"
+        class="p-button-text text-white"
+        (onClick)="mostarMenu()"
+      ></p-button>
+    </div>
+  </ng-template>
+
+  <!-- Íconos de acciones -->
+  <ng-template pTemplate="end">
+    <div class="flex items-center gap-2">
+      <p-button
+        icon="pi pi-globe"
+        class="text-white"
+        severity="secondary"
+      ></p-button>
+      <p-button
+        icon="pi pi-calendar"
+        class="text-white"
+        severity="secondary"
+      ></p-button>
+      <p-button
+        icon="pi pi-envelope"
+        class="text-white"
+        severity="secondary"
+      ></p-button>
+      <p-button
+        icon="pi pi-user"
+        class="text-white"
+        severity="secondary"
+      ></p-button>
+    </div>
+  </ng-template>
+</p-menubar>

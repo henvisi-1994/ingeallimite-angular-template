@@ -3,30 +3,41 @@ import { MenuItem } from 'primeng/api';
 import { AvatarModule } from 'primeng/avatar';
 import { BadgeModule } from 'primeng/badge';
 import { MenuModule } from 'primeng/menu';
-import { RippleModule } from 'primeng/ripple';
+import { Ripple, RippleModule } from 'primeng/ripple';
 import { DockModule } from 'primeng/dock';
 import { ButtonModule } from 'primeng/button';
 import { DockMenuComponent } from '../dock-menu/dock-menu.component';
 import { MenuStore } from '../../store/menu';
+import { AuthService } from '../../pages/auth/infraestructure/auth.service';
+import { User } from '../../pages/auth/domain/user';
 
 @Component({
-    selector: 'side-menu-component',
-    imports: [
-        MenuModule,
-        BadgeModule,
-        RippleModule,
-        AvatarModule,
-        DockModule,
-        ButtonModule,
-        DockMenuComponent,
-    ],
-    templateUrl: './side-menu.component.html',
-    styleUrl: './side-menu.component.scss'
+  selector: 'side-menu-component',
+  imports: [
+    MenuModule,
+    BadgeModule,
+    RippleModule,
+    AvatarModule,
+    DockModule,
+    ButtonModule,
+    DockMenuComponent,
+    Ripple
+  ],
+  templateUrl: './side-menu.component.html',
+  styleUrl: './side-menu.component.scss',
 })
 export class SideMenuComponent implements OnInit {
   items: MenuItem[] | [] = [];
+  user!: User;
   menu = inject(MenuStore);
+  authService = inject(AuthService);
+
   ngOnInit() {
     this.items = this.menu.links();
+    this.user = this.authService.getUser() ?? {
+      id: 0,
+      email: '',
+      name: '',
+    };
   }
 }
