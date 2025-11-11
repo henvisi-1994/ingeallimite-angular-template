@@ -1,49 +1,60 @@
-import { Injectable, inject, computed, NgZone, signal } from '@angular/core';
+import { Injectable, inject, signal, effect } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { Router } from '@angular/router';
+import { AuthStore } from './auth';
 import { AuthService } from '../pages/auth/infraestructure/auth.service';
 
 @Injectable({ providedIn: 'root' })
 export class MenuStore {
-  private auth = inject(AuthService);
+  private authService = inject(AuthService);
+  private authStore = inject(AuthStore);
 
+  visible = signal(true);
+  links = signal<MenuItem[]>([]);
 
-  visible = signal<Boolean>(true);
+  constructor() {
+    effect(() => {
+      const isAuthenticated = this.authStore.auth();
+      if (!isAuthenticated) {
+        this.links.set([]);
+        return;
+      }
+      const menu: MenuItem[] = [
+        { separator: true },
+        {
+          label: 'Home',
+          items: [
+            {
+              label: 'Dashboard',
+              icon: 'pi pi-home',
+              routerLink: '/',
+              visible: this.authStore.can('view_reports'),
+            },
+          ],
+        },
+        {
+          label: 'Documentos',
+          items: [
+            { label: 'Nuevo', icon: 'pi pi-plus', routerLink: '/document', visible: true },
+          ],
+        },
+        {
+          label: 'Perfil',
+          items: [
+            {
+              label: 'Cerrar Sesión',
+              icon: 'pi pi-sign-out',
+              visible: true,
+              command: () => this.logout(),
+            },
+          ],
+        },
+      ];
 
-  links = computed<MenuItem[]>(() => {
-    if (!this.auth.isAuthenticated()) {
-      return [];
-    }
-
-    return [
-      { separator: true },
-      {
-        label: 'Home',
-        items: [
-          { label: 'Dashboard', icon: 'pi pi-home', routerLink: '/', visible: true },
-        ],
-      },
-      {
-        label: 'Documentos',
-        items: [
-          { label: 'Nuevo', icon: 'pi pi-plus', routerLink: '/document', visible: true },
-        ],
-      },
-      {
-        label: 'Perfil',
-        items: [
-          {
-            label: 'Cerrar Sesión',
-            icon: 'pi pi-sign-out',
-            visible: true,
-            command: () => this.logout(),
-          },
-        ],
-      },
-    ];
-  });
+      this.links.set(menu);
+    });
+  }
 
   async logout() {
-    this.auth.logout();
+    await this.authService.logout();
   }
 }

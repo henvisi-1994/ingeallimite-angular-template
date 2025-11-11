@@ -28,15 +28,13 @@ import { AuthStore } from '../../store/auth';
   styleUrl: './side-menu.component.scss',
 })
 export class SideMenuComponent implements OnInit {
-  items: MenuItem[] | [] = [];
   user!: User;
   menu = inject(MenuStore);
   auth = inject(AuthStore);
   authService = inject(AuthService);
 
   async ngOnInit() {
-    this.items = this.menu.links();
-    await this.auth.isUserLoggedIn();
+    await this.auth.isUserLoggedIn(); // espera a que se cargue el usuario
     this.user = this.auth.user() ?? {
       id: 0,
       email: '',
@@ -44,5 +42,9 @@ export class SideMenuComponent implements OnInit {
       permissions: [],
       roles: [],
     };
+  }
+
+  get items(): MenuItem[] {
+    return this.menu.links(); // siempre obtiene el valor actualizado del signal
   }
 }

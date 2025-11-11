@@ -8,18 +8,12 @@ import { User } from '../pages/auth/domain/user';
 export class AuthStore {
   private readonly apiUrl = 'http://localhost:3000/api';
 
-  // ⚡ Signals (estado reactivo)
   readonly user = signal<User | null>(null);
   readonly auth = signal(false);
   readonly roles = signal<string[]>([]);
   readonly permisos = signal<string[]>([]);
 
-  // 🔁 Computed
-  readonly nombreCompleto = computed(() => {
-    const u = this.user();
-    return u ? u.name : '';
-  });
-
+  readonly nombreCompleto = computed(() => this.user()?.name ?? '');
   private readonly ADMIN = 'ADMIN';
 
   readonly esAdministrador = computed(
@@ -27,43 +21,31 @@ export class AuthStore {
   );
 
   constructor(private http: HttpClient, private router: Router) {
-    // Efecto opcional: debug de cambios
-    effect(() => {
-      console.log('👤 Usuario actual:', this.user());
-    });
+    effect(() => console.log('👤 Usuario actual:', this.user()));
   }
 
-  // 🚪 Logout
   async logout(): Promise<void> {
-    try {
-      this.clearUser();
-      this.router.navigate(['/auth/login']);
-    } catch {
-      // No pasa nada si falla
-    }
+    this.clearUser();
+    await this.router.navigate(['/auth/login']);
   }
 
-  // 👁️ Obtener usuario actual
   async getUser(): Promise<void> {
     try {
       const token = localStorage.getItem('token');
       if (!token) throw new Error('No token');
 
-      const res: any = await lastValueFrom(
-        this.http.get(`${this.apiUrl}/auth/me`, {
+      const res = await lastValueFrom(
+        this.http.get<User>(`${this.apiUrl}/auth/me`, {
           headers: { Authorization: `Bearer ${token}` },
         })
       );
 
       this.setUser(res);
-      this.permisos.set(res.permisos);
-      this.roles.set(res.roles);
     } catch (e) {
       this.clearUser();
     }
   }
 
-  // 🔑 Verificar sesión actual
   async isUserLoggedIn(): Promise<boolean> {
     if (!this.user()) {
       await this.getUser();
@@ -71,10 +53,11 @@ export class AuthStore {
     return this.auth();
   }
 
-  // 🎯 Helpers
   setUser(userData: User | null) {
     this.user.set(userData);
     this.auth.set(!!userData);
+    this.roles.set(userData?.roles ?? []);
+    this.permisos.set(userData?.permissions ?? []);
   }
 
   clearUser() {
@@ -85,6 +68,6 @@ export class AuthStore {
   }
 
   can(permiso: string): boolean {
-    return this.permisos()?.includes(permiso) ?? false;
+    return this.permisos().includes(permiso);
   }
 }
