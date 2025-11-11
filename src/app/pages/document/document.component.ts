@@ -16,6 +16,7 @@ import { GenericFormComponent } from '../../components/generic-form/generic-form
 import { FloatLabel } from 'primeng/floatlabel';
 import { FileUploadModule } from 'primeng/fileupload';
 import { GenericImageUploadComponent } from '../../components/generic-image-upload/generic-image-upload.component';
+import { Fluid } from 'primeng/fluid';
 
 @Component({
   selector: 'app-document',
@@ -28,6 +29,7 @@ import { GenericImageUploadComponent } from '../../components/generic-image-uplo
     InputTextModule,
     FloatLabel,
     FileUploadModule,
+    Fluid,
     GenericImageUploadComponent
   ],
   templateUrl: './document.component.html',

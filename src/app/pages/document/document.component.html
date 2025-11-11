@@ -11,78 +11,101 @@
     let-form="form"
     let-disabled="disabled"
   >
-    <div [formGroup]="documentForm" class="flex justify-center items-end gap-4">
-      <!-- === NOMBRE === -->
-      <p-floatlabel variant="in" class="field">
-        <input
-          pInputText
-          type="text"
-          name="nombre"
-          formControlName="nombre"
-          placeholder="Obligatorio"
-        />
-        <label for="on_label">Nombre</label>
-
-        @if (documentForm.get('nombre')?.invalid &&
-        (documentForm.get('nombre')?.touched ||
-        documentForm.get('nombre')?.dirty)) {
-        <p-message severity="error" size="small" variant="simple">
-          Nombre es requerido.
-        </p-message>
-        }
-      </p-floatlabel>
-
-      <!-- === TITULO === -->
-      <p-floatlabel variant="in" class="field">
-        <input
-          pInputText
-          type="text"
-          name="titulo"
-          formControlName="titulo"
-          placeholder="Obligatorio"
-        />
-        <label for="on_label">Titulo</label>
-        @if (documentForm.get('titulo')?.invalid &&
-        (documentForm.get('titulo')?.touched ||
-        documentForm.get('titulo')?.dirty)) {
-        <p-message severity="error" size="small" variant="simple">
-          Título es requerido.
-        </p-message>
-        }
-      </p-floatlabel>
-
-      <!-- === DESCRIPCIÓN === -->
-      <p-floatlabel variant="in" class="field">
-        <input
-          pInputText
-          type="text"
-          name="descripcion"
-          placeholder="Obligatorio"
-          formControlName="descripcion"
-        />
-        <label for="on_label">Descripcion</label>
-        @if (documentForm.get('descripcion')?.invalid &&
-        (documentForm.get('descripcion')?.touched ||
-        documentForm.get('descripcion')?.dirty)) {
-        <p-message severity="error" size="small" variant="simple">
-          Descripción es requerida.
-        </p-message>
-        }
-      </p-floatlabel>
-
-      <p-floatlabel variant="in" class="field">
-        <app-generic-image-upload
-          [formGroup]="documentForm"
-          controlName="imagen"
-        ></app-generic-image-upload>
-        @if (documentForm.get('imagen')?.invalid &&
-        (documentForm.get('imagen')?.touched ||
-        documentForm.get('imagen')?.dirty)) {
-        <p-message severity="error" size="small" variant="simple">
-          La Imagen es requerido.
-        </p-message>
-        }
-      </p-floatlabel>
-    </div>
+    <p-fluid>
+      <div
+        [formGroup]="documentForm"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+      >
+        <!-- === NOMBRE === -->
+        <p-floatlabel variant="in">
+          <input
+            id="nombre"
+            type="text"
+            pInputText
+            formControlName="nombre"
+            placeholder=" "
+            fluid
+          />
+          <label for="nombre">Nombre</label>
+          @if (documentForm.get('nombre')?.invalid &&
+          (documentForm.get('nombre')?.touched ||
+          documentForm.get('nombre')?.dirty)) {
+          <div class="mt-2">
+            <p-message severity="error" size="small" variant="simple">
+              Nombre es requerido.
+            </p-message>
+          </div>
+          }
+        </p-floatlabel>
+        <!-- === TITULO === -->
+        <p-floatlabel variant="in">
+          <input
+            id="titulo"
+            type="text"
+            pInputText
+            formControlName="titulo"
+            placeholder=" "
+            fluid
+          />
+          <label for="titulo">Título</label>
+          @if (documentForm.get('titulo')?.invalid &&
+          (documentForm.get('titulo')?.touched ||
+          documentForm.get('titulo')?.dirty)) {
+          <div class="mt-2">
+            <p-message
+              severity="error"
+              size="small"
+              variant="simple"
+              class="mt-2"
+            >
+              Título es requerido.
+            </p-message>
+          </div>
+          }
+        </p-floatlabel>
+        <!-- === DESCRIPCIÓN === -->
+        <p-floatlabel variant="in">
+          <input
+            id="descripcion"
+            type="text"
+            pInputText
+            formControlName="descripcion"
+            placeholder=" "
+            fluid
+          />
+          <label for="descripcion">Descripción</label>
+          @if (documentForm.get('descripcion')?.invalid &&
+          (documentForm.get('descripcion')?.touched ||
+          documentForm.get('descripcion')?.dirty)) {
+          <div class="mt-2">
+            <p-message severity="error" size="small" variant="simple">
+              Descripción es requerida.
+            </p-message>
+          </div>
+          }
+        </p-floatlabel>
+        <!-- === IMAGEN === -->
+        <p-floatlabel variant="in" class="field">
+          <app-generic-image-upload
+            [formGroup]="documentForm"
+            controlName="imagen"
+          ></app-generic-image-upload>
+          @if (documentForm.get('imagen')?.invalid &&
+          (documentForm.get('imagen')?.touched ||
+          documentForm.get('imagen')?.dirty)) {
+          <div class="mt-2">
+            <p-message
+              severity="error"
+              size="small"
+              variant="simple"
+              class="error-message"
+            >
+              La Imagen es requerido.
+            </p-message>
+          </div>
+          }
+        </p-floatlabel>
+      </div>
+    </p-fluid>
   </ng-template>
 </app-generic-form>
